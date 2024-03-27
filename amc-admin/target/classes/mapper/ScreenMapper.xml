@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.amc.mapper.ScreenMapper">
+    <insert id="save">
+        insert into record_screen
+        (
+        record_screen_id,
+        project_id,
+        events,
+        device_info,
+        sdk_version,
+        time,
+        user_id,
+        uuid,
+        ip,
+        province,
+        city,
+        page_url
+        ) values
+        (
+        #{recordScreenId},
+        #{apiKey},
+        #{events},
+        #{deviceInfo},
+        #{sdkVersion},
+        #{time},
+        #{userId},
+        #{routeId},
+        #{ip},
+        #{province},
+        #{city},
+        #{pageUrl}
+        )
+    </insert>
+</mapper>

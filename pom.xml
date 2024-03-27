@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.amc</groupId>
+    <artifactId>amc-server</artifactId>
+    <version>0.0.1</version>
+
+    <packaging>pom</packaging>
+    <modules>
+        <module>amc-admin</module>
+        <module>amc-core</module>
+    </modules>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.4.RELEASE</version>
+    </parent>
+
+    <properties>
+        <amc.version>0.0.1</amc.version>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    </properties>
+
+    <!--依赖管理-->
+    <dependencyManagement>
+        <dependencies>
+            <!--amc核心包-->
+            <dependency>
+                <groupId>com.amc</groupId>
+                <artifactId>amc-core</artifactId>
+                <version>${amc.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <!--
+                    这个插件是编译普通java代码的
+                    与SpringBoot打包的那个插件是有区别的
+                    因为我们这个项目是 父子联动的
+                    所以父项目本质上是没有SpringBoot的东西的
+                    只有admin项目会包含Springboot的东西,并且包含启动类
+                    所以SpringBoot打包插件配置在admin子项目pom中即可
+
+                    在父项目pom中你也可以不配置下面这个 插件,也能打包
+                -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

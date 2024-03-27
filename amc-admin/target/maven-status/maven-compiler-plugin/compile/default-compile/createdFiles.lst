@@ -1,0 +1,5 @@
+com\amc\web\controller\performance\Per.class
+com\amc\Main.class
+com\amc\web\domain\DeviceInfo.class
+com\amc\web\domain\PerConfig.class
+com\amc\web\domain\Result.class

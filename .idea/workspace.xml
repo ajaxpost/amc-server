@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2486309a-3c0d-46e5-8a27-7036c50fdd92" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/mapper/ErrorMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/mapper/PerMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/mapper/ScreenMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/ErrorServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/PerServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/ScreenServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/impl/ErrorServicesImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/impl/PerServicesImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/impl/ScreenServicesImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/typeHandler/DeviceInfoTypeHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/typeHandler/ListTypeHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/error/error.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/performance/Per.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/screen/Screen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/Breadcrumb.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/DeviceInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/ErrorConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/PerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/RecordScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/Result.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/ErrorMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/PerMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/ScreenMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-core/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/controller/FileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/exception/CustomException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/exception/CustomHandlerExceptionReslove.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/exception/UserException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/servlet/config/config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/servlet/myFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/servlet/myListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/servlet/myServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-05/src/main/resources/haha/CSS/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-05/src/main/resources/haha/error/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-05/src/main/resources/haha/error/5xx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/boot-06-jdbc.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/java/com/example/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/java/com/example/config/ConfigTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/java/com/example/config/DataSourceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/java/com/example/config/MybatisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/java/com/example/controller/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/java/com/example/domain/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/java/com/example/domain/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/java/com/example/domain/Pet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/java/com/example/domain/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/java/com/example/mapper/AccountMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/java/com/example/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/java/com/example/services/AccountServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/java/com/example/services/UserServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/java/com/example/services/impl/UserServicesImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/resources/META-INF/111.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/resources/mapper/AccountMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-05/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-05/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/controller/ParamsTestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/controller/ParamsTestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-05/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-05/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-05/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-05/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-05/target/classes/com/example/MainApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-05/target/classes/com/example/MainApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-05/target/classes/com/example/controller/ParamsTestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-05/target/classes/com/example/controller/ParamsTestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boot-05/target/classes/com/example/interceptor/TestInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-05/target/classes/com/example/interceptor/TestInterceptor.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\javacode\spring-boot\amc-server\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="customMavenHome" value="E:/apache-maven-3.6.1" />
+        <option name="localRepository" value="E:\apache-maven-3.6.1\mvn_resp" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
+        <option name="userSettingsFile" value="E:\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2eAYZ7PUA7XznXsG0MME2zU2Cfb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JAR 应用程序.amc-admin-0.0.1.jar.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.amc-server [clean,package].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/javacode/spring-boot/amc-server&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
+    &quot;应用程序.Main.executor&quot;: &quot;Run&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\javacode\spring-boot\amc-server\amc-admin\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.amc.web.exception" />
+    </key>
+  </component>
+  <component name="RunManager" selected="应用程序.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.amc.Main" />
+      <module name="amc-admin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.amc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="amc-admin-0.0.1.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/amc-admin/target/amc-admin-0.0.1.jar" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="amc-admin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.amc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.amc.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.Main" />
+        <item itemvalue="JAR 应用程序.amc-admin-0.0.1.jar" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-1.8.0_402-corretto-1.8.0_402-4caba194b151-ae57be32" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2486309a-3c0d-46e5-8a27-7036c50fdd92" name="Default Changelist" comment="" />
+      <created>1711348901764</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711348901764</updated>
+      <workItem from="1711348904600" duration="8083000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint type="java-exception">
+          <properties class="java.io.NotSerializableException" package="java.io" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

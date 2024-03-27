@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.amc.mapper.ErrorMapper">
+
+    <insert id="save">
+        insert into error (
+            error_id,
+            project_id,
+            city,
+            province,
+            ip,
+            page_url,
+            sdk_version,
+            type,
+            time,
+            user_id,
+            uuid,
+            record_screen_id,
+            line_number,
+            column_number,
+            error_msg,
+            error_stack,
+            device_info,
+            bread_crumb
+        ) values (
+            #{errorId},
+            #{apiKey},
+            #{city},
+            #{province},
+            #{ip},
+            #{pageUrl},
+            #{sdkVersion},
+            #{type},
+            #{time},
+            #{userId},
+            #{routeId},
+            #{recordScreenId},
+            #{lineNumber},
+            #{columnNumber},
+            #{errorMsg},
+            #{errorStack},
+            #{deviceInfo},
+            #{breadCrumb, typeHandler=com.amc.typeHandler.ListTypeHandler, jdbcType=VARCHAR}
+        )
+    </insert>
+
+</mapper>

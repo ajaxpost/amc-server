@@ -1,0 +1,56 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/amc?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    druid:
+      # 配置 spring 监控
+      aop-patterns: com.amc.*
+
+      # 开启 web 监控
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/
+        login-username: admin
+        login-password: 1234
+        reset-enable: false
+
+      web-stat-filter:
+        enabled: true
+        url-pattern: /*
+        exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+      filters: stat,wall,slf4j
+
+      filter:
+        stat:
+          enabled: true
+          # 定义慢查询时间,凡是超过 1000 毫秒的都是慢查询
+          slow-sql-millis: 1000
+          # 是否记录慢查询日志
+          log-slow-sql: true
+        wall:
+          enabled: true
+          config:
+            # 防火墙设置不允许删表
+            # 删表操作都是被拦截
+            drop-table-allow: false
+            # 是否允许执行多条 SQL 语句
+      type: com.alibaba.druid.pool.DruidDataSource
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+mybatis:
+    mapper-locations: classpath:mapper/*.xml
+    type-aliases-package: com.amc.web.domain
+    type-handlers-package: com.amc.typeHandler
+    configuration:
+        map-underscore-to-camel-case: true # 开启驼峰命名
+        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

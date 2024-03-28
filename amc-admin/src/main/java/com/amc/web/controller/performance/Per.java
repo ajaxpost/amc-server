@@ -17,12 +17,12 @@ public class Per {
 
     @CrossOrigin
     @PostMapping("/esc")
-    public Result<String> esc(@RequestBody PerConfig perConfig){
-        log.info("性能上报:{}",perConfig);
+    public Result esc(@RequestBody PerConfig perConfig) {
+        log.info("性能上报:{}", perConfig);
         int save = perServices.save(perConfig);
-        if(save == 0){
-            return new Result<>(500,"性能上报失败","fail");
+        if (save == 0) {
+            return new Result(500, "性能上报失败", "fail");
         }
-        return new Result<>(200,"性能上报成功","success");
+        return new Result(200, "性能上报成功", "success");
     }
 }

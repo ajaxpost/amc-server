@@ -48,9 +48,21 @@ spring:
       force: true
 
 mybatis:
-    mapper-locations: classpath:mapper/*.xml
-    type-aliases-package: com.amc.web.domain
-    type-handlers-package: com.amc.typeHandler
-    configuration:
-        map-underscore-to-camel-case: true # 开启驼峰命名
-        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.amc.web.domain
+  type-handlers-package: com.amc.typeHandler
+  configuration:
+    map-underscore-to-camel-case: true # 开启驼峰命名
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+# 分页插件
+pagehelper:
+  # helperDialect: 这是你使用的数据库的方言。在这个例子中，它被设置为 mysql，这意味着你使用的是 MySQL 数据库。
+  # reasonable: 这个参数用于设置分页参数（页码和页面大小）的合理化。如果它被设置为 true，那么当请求的页码超出范围时，PageHelper 会自动调整页码。例如，如果请求的页码小于 1，那么 PageHelper 会将页码设置为 1；如果请求的页码大于总页数，那么 PageHelper 会将页码设置为总页数。
+  # supportMethodsArguments: 这个参数用于设置是否支持通过 Mapper 接口参数来传递分页参数。如果它被设置为 true，那么你可以在你的 Mapper 接口方法中添加 pageNum 和 pageSize 参数，PageHelper 会自动识别这些参数并进行分页。
+  # params: 这个参数用于设置其他的分页参数。在这个例子中，它被设置为 count=countSql，这意味着 PageHelper 会使用 countSql 作为计算总记录数的 SQL 语句。
+  # autoRuntimeDialect: 这个参数用于设置是否自动检测当前的数据库方言。如果它被设置为 true，那么 PageHelper 会自动检测当前的数据库方言并使用相应的分页查询语句。这对于多数据源的情况非常有用。
+  helperDialect: mysql
+  #  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+#  autoRuntimeDialect: true

@@ -7,9 +7,17 @@ import lombok.ToString;
 @Data
 @ToString
 @AllArgsConstructor
-public class Result<T> {
+public class Result {
+
     private int code;
     private String message;
-    private T data;
+    private Object data;
+    private Long total;
+
+    public Result(int code, String message, Object data) {
+        this.code = code;
+        this.message = message;
+        this.data = data;
+    }
 
 }

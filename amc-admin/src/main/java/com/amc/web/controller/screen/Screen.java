@@ -19,11 +19,11 @@ public class Screen {
     private ScreenServices screenServices;
 
     @PostMapping("/report/screen")
-    public Result<String> reportScreen(@RequestBody RecordScreen recordScreen){
-        log.info("屏幕上报:{}",recordScreen);
+    public Result reportScreen(@RequestBody RecordScreen recordScreen) {
+        log.info("屏幕上报:{}", recordScreen);
         int save = screenServices.save(recordScreen);
         if (save == 0)
-            return new Result<>(500,"屏幕上报失败","fail");
-        return new Result<>(200,"屏幕上报成功","success");
+            return new Result(500, "屏幕上报失败", "fail");
+        return new Result(200, "屏幕上报成功", "success");
     }
 }

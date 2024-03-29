@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.amc.mapper.RouterMapper">
+    <insert id="pvSave" parameterType="pvPOJO">
+        insert into pv
+        (
+        route_id,
+        project_id,
+        ip,
+        city,
+        province,
+        entry_time,
+        page_address,
+        page_name,
+        page_url,
+        residence_time,
+        ses_id,
+        sdk_version,
+        time,
+        user_id,
+        device_info
+        ) values
+        (
+        #{routeId},
+        #{apiKey},
+        #{ip},
+        #{city},
+        #{province},
+        #{entryTime},
+        #{pageAddress},
+        #{pageName},
+        #{pageUrl},
+        #{residenceTime},
+        #{sesId},
+        #{sdkVersion},
+        #{time},
+        #{userId},
+        #{deviceInfo}
+        )
+    </insert>
+
+
+    <resultMap id="findTimeListMap" type="pvPOJO">
+        <result column="project_id" property="apiKey"/>
+    </resultMap>
+
+
+    <select id="findTimeList" parameterType="string" resultMap="findTimeListMap">
+        select * from pv
+        where DATE(FROM_UNIXTIME(time / 1000)) = #{time}
+    </select>
+</mapper>

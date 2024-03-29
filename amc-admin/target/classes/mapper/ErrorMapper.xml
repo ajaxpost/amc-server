@@ -6,44 +6,64 @@
 
     <insert id="save">
         insert into error (
-            error_id,
-            project_id,
-            city,
-            province,
-            ip,
-            page_url,
-            sdk_version,
-            type,
-            time,
-            user_id,
-            uuid,
-            record_screen_id,
-            line_number,
-            column_number,
-            error_msg,
-            error_stack,
-            device_info,
-            bread_crumb
+        error_id,
+        project_id,
+        city,
+        province,
+        ip,
+        page_url,
+        sdk_version,
+        type,
+        time,
+        user_id,
+        route_id,
+        ses_id,
+        record_screen_id,
+        line_number,
+        column_number,
+        error_msg,
+        error_stack,
+        device_info,
+        bread_crumb
         ) values (
-            #{errorId},
-            #{apiKey},
-            #{city},
-            #{province},
-            #{ip},
-            #{pageUrl},
-            #{sdkVersion},
-            #{type},
-            #{time},
-            #{userId},
-            #{routeId},
-            #{recordScreenId},
-            #{lineNumber},
-            #{columnNumber},
-            #{errorMsg},
-            #{errorStack},
-            #{deviceInfo},
-            #{breadCrumb, typeHandler=com.amc.typeHandler.ListTypeHandler, jdbcType=VARCHAR}
+        #{errorId},
+        #{apiKey},
+        #{city},
+        #{province},
+        #{ip},
+        #{pageUrl},
+        #{sdkVersion},
+        #{type},
+        #{time},
+        #{userId},
+        #{routeId},
+        #{sesId},
+        #{recordScreenId},
+        #{lineNumber},
+        #{columnNumber},
+        #{errorMsg},
+        #{errorStack},
+        #{deviceInfo},
+        #{breadCrumb, typeHandler=com.amc.typeHandler.ListTypeHandler, jdbcType=VARCHAR}
         )
     </insert>
+
+
+    <resultMap id="listMap" type="errorConfig">
+        <result column="project_id" property="apiKey"/>
+        <result column="uuid" property="routeId"/>
+    </resultMap>
+
+    <select id="list" resultMap="listMap">
+        select * from error
+        <where>
+            <if test="pid != null">
+                and project_id = #{pid}
+            </if>
+            <if test="startDate != null and endDate != null">
+                and time between #{startDate} and #{endDate}
+            </if>
+        </where>
+    </select>
 
 </mapper>

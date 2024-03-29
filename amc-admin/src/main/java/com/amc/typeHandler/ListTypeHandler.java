@@ -24,16 +24,34 @@ public class ListTypeHandler<T> extends BaseTypeHandler<List<T>> {
 
     @Override
     public List<T> getNullableResult(ResultSet resultSet, String s) throws SQLException {
-        return null;
+        String string = resultSet.getString(s);
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            return objectMapper.readValue(string, List.class);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
     public List<T> getNullableResult(ResultSet resultSet, int i) throws SQLException {
-        return null;
+        String string = resultSet.getString(i);
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            return objectMapper.readValue(string, List.class);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
     public List<T> getNullableResult(CallableStatement callableStatement, int i) throws SQLException {
-        return null;
+        String string = callableStatement.getString(i);
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            return objectMapper.readValue(string, List.class);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

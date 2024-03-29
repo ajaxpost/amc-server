@@ -17,6 +17,7 @@ public class RecordScreen {
     private Long time;
     private String userId;
     private String routeId;
+    private String sesId;
     private String ip;
     private String province;
     private String city;

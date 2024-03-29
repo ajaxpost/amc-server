@@ -32,10 +32,9 @@ public class PerConfig {
      */
     private String userId;
 
-    /**
-     * 会话标识 uuid
-     */
+
     private String routeId;
+    private String sesId;
 
     private Integer value;
 

@@ -40,20 +40,15 @@ spring:
             # 删表操作都是被拦截
             drop-table-allow: false
             # 是否允许执行多条 SQL 语句
-      type: com.alibaba.druid.pool.DruidDataSource
-  http:
-    encoding:
-      charset: UTF-8
-      enabled: true
-      force: true
+    type: com.alibaba.druid.pool.DruidDataSource
+  output:
+    ansi:
+      enabled: detect
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.amc.web.domain
-  type-handlers-package: com.amc.typeHandler
-  configuration:
-    map-underscore-to-camel-case: true # 开启驼峰命名
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  config-location: classpath:mybatis-config.xml
+
 # 分页插件
 pagehelper:
   # helperDialect: 这是你使用的数据库的方言。在这个例子中，它被设置为 mysql，这意味着你使用的是 MySQL 数据库。
@@ -66,3 +61,13 @@ pagehelper:
   supportMethodsArguments: true
   params: count=countSql
 #  autoRuntimeDialect: true
+
+
+# 日志配置
+# 在这个例子中，com.amc 包的日志级别被设置为 debug。这意味着，对于 com.amc 包中的所有类，只要日志级别等于或高于 debug，就会被记录下来。
+# 日志级别从低到高分别是：TRACE、DEBUG、INFO、WARN、ERROR、FATAL、OFF。debug 级别会记录 debug、info、warn、error 和 fatal 级别的日志。  这样的配置可以帮助开发者在开发或者调试应用时，更好地了解应用的运行状态和问题所在。
+logging:
+  level:
+    com.amc: debug
+    org.springframework: warn
+

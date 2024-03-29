@@ -31,7 +31,6 @@ public class Project {
     @PostMapping("/saveProject")
     public Result saveProject(@RequestBody ProjectPOJO projectPOJO) {
         int save = projectServices.save(projectPOJO);
-        // @TODO 还未测试
         if (save == 0) {
             return new Result(500, "操作失败", "fail");
         }

@@ -21,6 +21,7 @@ public class ErrorConfig {
     private Long time;
     private String userId;
     private String routeId;
+    private String sesId;
     private String recordScreenId;
     private Integer lineNumber;
     private Integer columnNumber;

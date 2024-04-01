@@ -1,5 +1,9 @@
 server:
   port: 8080
+  servlet:
+    context-path: /amc
+
+
 
 spring:
   datasource:
@@ -70,4 +74,12 @@ logging:
   level:
     com.amc: debug
     org.springframework: warn
+
+amc:
+  name: amc-server
+  desc: amc-server 接口开发文档
+  version: 1.0.0
+  author: Ax
+  email: 13171754463@163.com
+  url: https://github.com/ajaxpost/amc-server
 

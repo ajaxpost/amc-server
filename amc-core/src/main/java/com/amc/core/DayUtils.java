@@ -21,6 +21,12 @@ public class DayUtils {
         return formatter.format(instant);
     }
 
+    public static String timestamptoDateString(long timestamp, String pattern) {
+        Instant instant = Instant.ofEpochMilli(timestamp);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern).withZone(ZoneId.systemDefault());
+        return formatter.format(instant);
+    }
+
     /**
      * 获取当天零点的时间字符
      *

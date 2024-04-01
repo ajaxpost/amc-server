@@ -10,4 +10,6 @@ public interface RouterMapper {
 
     List<PvPOJO> findTimeList(String time); // 2024-03-29 这样的格式 ==> time
 
+    List<PvPOJO> findTimeListByHour(String time); // 11:00
+
 }

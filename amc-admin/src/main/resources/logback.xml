@@ -2,7 +2,8 @@
 <!-- scan scanPeriod debug -->
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
     <!-- property -> springProperty, 属性文件:在properties文件中找到对应的配置项 -->
-    <property name="logging.file.path" value="D:\\javacode\\spring-boot\\amc-server\\logs"/>
+    <!--    <property name="logging.file.path" value="D:\\javacode\\spring-boot\\amc-server\\logs"/>-->
+    <property name="logging.file.path" value="/usr/JavaCode/amc-logs"/>
     <springProperty scope="context" name="logging.file.path" source="logging.file.path"/>
     <!-- contextName 区分不同应用程序 -->
     <contextName>myDemo</contextName>

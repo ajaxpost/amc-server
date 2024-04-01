@@ -1,6 +1,7 @@
 package com.amc.mapper;
 
 import com.amc.web.domain.ErrorConfig;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -15,6 +16,7 @@ public interface ErrorMapper {
     int save(ErrorConfig errorConfig);
 
 
-    List<ErrorConfig> list(String pid, String startDate, String endDate);
-    
+    List<ErrorConfig> list(@Param("pid") String pid, @Param("startDate") String startDate, @Param("endDate") String endDate);
+
+
 }

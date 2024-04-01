@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2486309a-3c0d-46e5-8a27-7036c50fdd92" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/mapper/RouterMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/RouterServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/impl/RouterServicesImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/pv_uv/Router.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/PvPOJO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/RouterMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/amc-core/src/main/java/com/amc/core/DayUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-core/src/main/java/com/amc/core/config/AmcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc.sh" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/controller/FileController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/exception/CustomException.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/exception/CustomHandlerExceptionReslove.java" afterDir="false" />
@@ -44,43 +37,62 @@
       <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/resources/META-INF/111.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/resources/application.yml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/resources/mapper/AccountMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java_web/forum.rar" beforeDir="false" afterPath="$PROJECT_DIR$/../../java_web/forum.rar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/amc-server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/amc-server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/mapper/ErrorMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/mapper/ErrorMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/mapper/ProjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/mapper/ProjectMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/mapper/RouterMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/mapper/RouterMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/ErrorServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/ErrorServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/ProjectServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/ProjectServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/impl/ErrorServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/impl/ErrorServicesImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/impl/ProjectServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/impl/ProjectServicesImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/typeHandler/DeviceInfoTypeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/typeHandler/DeviceInfoTypeHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/typeHandler/ListTypeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/typeHandler/ListTypeHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/error/error.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/error/error.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/performance/Per.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/performance/Per.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/project/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/project/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/ErrorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/ErrorConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/PerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/PerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/pv_uv/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/pv_uv/Router.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/screen/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/screen/Screen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/RecordScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/RecordScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/ErrorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/ErrorMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/PerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/PerMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/ProjectMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/ProjectMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/ScreenMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/ScreenMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/RouterMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/RouterMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/target/amc-admin-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/amc-admin-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/target/amc-admin-0.0.1.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/amc-admin-0.0.1.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/mapper/ErrorMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/mapper/ErrorMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/mapper/PerMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/mapper/PerMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/mapper/ProjectMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/mapper/ProjectMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/mapper/ScreenMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/mapper/ScreenMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/services/ErrorServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/services/ErrorServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/services/PerServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/services/PerServices.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/services/ProjectServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/services/ProjectServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/services/ScreenServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/services/ScreenServices.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/services/impl/ErrorServicesImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/services/impl/ErrorServicesImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/services/impl/PerServicesImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/services/impl/PerServicesImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/services/impl/ProjectServicesImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/services/impl/ProjectServicesImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/services/impl/ScreenServicesImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/services/impl/ScreenServicesImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/typeHandler/DeviceInfoTypeHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/typeHandler/DeviceInfoTypeHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/typeHandler/ListTypeHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/typeHandler/ListTypeHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/web/controller/error/error.class" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/web/controller/error/error.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/web/controller/performance/Per.class" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/web/controller/performance/Per.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/web/controller/project/Project.class" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/web/controller/project/Project.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/web/controller/screen/Screen.class" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/web/controller/screen/Screen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/web/domain/Breadcrumb.class" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/web/domain/Breadcrumb.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/web/domain/DeviceInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/web/domain/DeviceInfo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/web/domain/ErrorConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/web/domain/ErrorConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/web/domain/PerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/web/domain/PerConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/web/domain/ProjectPOJO.class" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/web/domain/ProjectPOJO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/web/domain/RecordScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/web/domain/RecordScreen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/mapper/ErrorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/mapper/ErrorMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/mapper/PerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/mapper/PerMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/mapper/ProjectMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/mapper/ProjectMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/mapper/ScreenMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/mapper/ScreenMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/web/domain/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/classes/com/amc/web/domain/Result.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-core/src/main/java/com/amc/core/DayUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-core/src/main/java/com/amc/core/DayUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-core/target/amc-core-0.0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/amc-core/target/amc-core-0.0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/amc-core/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo" beforeDir="false" afterPath="$PROJECT_DIR$/todo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../boot-05/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-05/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/MainApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/controller/ParamsTestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/controller/ParamsTestController.java" afterDir="false" />
@@ -163,27 +175,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;JAR 应用程序.amc-admin-0.0.1.jar.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.amc-server [clean,package].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/javacode/spring-boot/amc-server&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;应用程序.Main.executor&quot;: &quot;Run&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
+    "JAR 应用程序.amc-admin-0.0.1.jar.executor": "Run",
+    "Maven.amc-admin [clean,package].executor": "Run",
+    "Maven.amc-server [clean,package].executor": "Run",
+    "Maven.amc-server [clean].executor": "Run",
+    "Maven.amc-server [package].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/javacode/java_web/forum",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "应用程序.Main.executor": "Run"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\javacode\spring-boot\amc-server\amc-admin\src\main\resources" />

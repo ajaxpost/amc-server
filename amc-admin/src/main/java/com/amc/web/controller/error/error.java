@@ -5,6 +5,7 @@ import com.amc.services.ErrorServices;
 import com.amc.web.domain.ErrorConfig;
 import com.amc.web.domain.Result;
 import com.github.pagehelper.PageHelper;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -21,6 +22,7 @@ public class error {
 
     @PostMapping("/report/error")
     @CrossOrigin
+    @ApiOperation(tags = "收集器->上报错误信息", value = "上报错误信息")
     public Result reportError(@RequestBody ErrorConfig errorConfig) {
         log.info("错误上报:{}", errorConfig);
         int save = errorServices.save(errorConfig);
@@ -32,6 +34,7 @@ public class error {
     }
 
     @GetMapping("/error/overflow")
+    @ApiOperation(value = "获取一段时间内的错误概览信息", notes = "根据PID,开始时间,结束时间获取错误信息概览", tags = {"连接器->错误信息统计"})
     public Result errorOverflow(@RequestParam String pid,
                                 @RequestParam String startDate,
                                 @RequestParam String endDate) {
@@ -45,15 +48,15 @@ public class error {
      * 获取当天24小时所有错误量
      */
     @GetMapping("/error/getErrorCountListByHour")
+    @ApiOperation(value = "获取当天24小时所有错误量", notes = "根据项目ID获取当天24小时所有错误量", tags = {"连接器->错误信息统计"})
     public Result getErrorCountListByHour(@RequestParam String pid) {
         Long startLong = DayUtils.getCurrentStartLong();
         Long endLong = DayUtils.getCurrentEndLong();
 
         log.info("startLong,{},endLong,{}", startLong, endLong);
-//        HashMap<String, List<HashMap<String, Object>>> map = errorServices.list(pid, startTime, endTime);
+        HashMap<String, List<HashMap<String, Object>>> map = errorServices.listByHour(pid, startLong.toString(), endLong.toString());
 
-//        return new Result(200, "获取成功", map);
-        return null;
+        return new Result(200, "获取成功", map);
     }
 
 }

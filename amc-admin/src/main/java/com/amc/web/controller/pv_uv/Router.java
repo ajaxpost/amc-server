@@ -3,6 +3,7 @@ package com.amc.web.controller.pv_uv;
 import com.amc.services.RouterServices;
 import com.amc.web.domain.PvPOJO;
 import com.amc.web.domain.Result;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -19,9 +20,7 @@ public class Router {
 
     @CrossOrigin
     @PostMapping("/report/pv")
-    /**
-     * 上报pv
-     */
+    @ApiOperation(tags = "收集器->上报PV", value = "上报PV")
     public Result reportPv(@RequestBody PvPOJO pv) {
         log.info("pv上报:{}", pv);
         int i = routerServices.pvSave(pv);

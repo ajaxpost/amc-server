@@ -5,6 +5,7 @@ import com.amc.web.domain.ProjectPOJO;
 import com.amc.web.domain.Result;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +20,7 @@ public class Project {
     private ProjectServices projectServices;
 
     @GetMapping("/getProject")
+    @ApiOperation(value = "获取项目列表", notes = "获取项目列表", tags = {"连接器->获取项目信息"})
     public Result getProject(@RequestParam(required = false, defaultValue = "1") Integer pageNum,
                              @RequestParam(required = false, defaultValue = "10") Integer pageSize,
                              @RequestParam(required = false, defaultValue = "") String name) {
@@ -29,6 +31,7 @@ public class Project {
     }
 
     @PostMapping("/saveProject")
+    @ApiOperation(value = "新建项目", notes = "新建项目", tags = {"连接器->保存项目信息"})
     public Result saveProject(@RequestBody ProjectPOJO projectPOJO) {
         int save = projectServices.save(projectPOJO);
         if (save == 0) {

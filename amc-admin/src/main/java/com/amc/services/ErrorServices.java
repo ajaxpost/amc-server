@@ -9,4 +9,6 @@ public interface ErrorServices {
     int save(ErrorConfig errorConfig);
 
     HashMap<String, List<HashMap<String, Object>>> list(String pid, String startDate, String endDate);
+
+    HashMap<String, List<HashMap<String, Object>>> listByHour(String pid, String startDate, String endDate);
 }

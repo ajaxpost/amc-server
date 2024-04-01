@@ -3,6 +3,7 @@ package com.amc.web.controller.screen;
 import com.amc.services.ScreenServices;
 import com.amc.web.domain.RecordScreen;
 import com.amc.web.domain.Result;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -19,6 +20,8 @@ public class Screen {
     private ScreenServices screenServices;
 
     @PostMapping("/report/screen")
+    @CrossOrigin
+    @ApiOperation(tags = "收集器->上报屏幕信息", value = "上报屏幕信息")
     public Result reportScreen(@RequestBody RecordScreen recordScreen) {
         log.info("屏幕上报:{}", recordScreen);
         int save = screenServices.save(recordScreen);

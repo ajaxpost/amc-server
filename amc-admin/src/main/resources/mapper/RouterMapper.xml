@@ -51,4 +51,9 @@
         select * from pv
         where DATE(FROM_UNIXTIME(time / 1000)) = #{time}
     </select>
+
+    <select id="findTimeListByHour" parameterType="string" resultMap="findTimeListMap">
+        select * from pv
+        where FROM_UNIXTIME(time / 1000,'%H:00') = #{time}
+    </select>
 </mapper>

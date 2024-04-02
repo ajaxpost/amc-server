@@ -26,10 +26,10 @@
         create_time
         ) values
         (
-        #{project_id},
-        #{project_name},
-        #{project_desc},
-        #{create_time}
+        #{projectId},
+        #{projectName},
+        #{projectDesc},
+        #{createTime}
         )
     </insert>
 

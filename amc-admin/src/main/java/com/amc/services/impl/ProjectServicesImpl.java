@@ -28,7 +28,7 @@ public class ProjectServicesImpl implements ProjectServices {
 
     @Override
     public int save(ProjectPOJO projectPOJO) {
-        ProjectPOJO pojo = findId(projectPOJO.getProject_id());
+        ProjectPOJO pojo = findId(projectPOJO.getProjectId());
         log.info("pojo:{}", pojo);
         if (pojo != null) return 0;
         return projectMapper.save(projectPOJO);

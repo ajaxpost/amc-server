@@ -1,8 +1,8 @@
 package com.amc.web.controller.pv_uv;
 
+import com.amc.core.exception.AjaxResult;
 import com.amc.services.RouterServices;
 import com.amc.web.domain.PvPOJO;
-import com.amc.web.domain.Result;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,10 +21,13 @@ public class Router {
     @CrossOrigin
     @PostMapping("/report/pv")
     @ApiOperation(tags = "收集器->上报PV", value = "上报PV")
-    public Result reportPv(@RequestBody PvPOJO pv) {
+    public AjaxResult reportPv(@RequestBody PvPOJO pv) {
         log.info("pv上报:{}", pv);
         int i = routerServices.pvSave(pv);
-        return new Result(i > 0 ? 200 : 500, i > 0 ? "success" : "fail", null);
+        if (i > 0) {
+            return AjaxResult.success("pv上报成功");
+        }
+        return AjaxResult.error("pv上报失败");
     }
 
 

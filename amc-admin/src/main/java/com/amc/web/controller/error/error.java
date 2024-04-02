@@ -1,10 +1,13 @@
 package com.amc.web.controller.error;
 
 import com.amc.core.DayUtils;
+import com.amc.core.exception.AjaxResult;
 import com.amc.services.ErrorServices;
 import com.amc.web.domain.ErrorConfig;
-import com.amc.web.domain.Result;
 import com.github.pagehelper.PageHelper;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +18,7 @@ import java.util.List;
 
 @RestController
 @Slf4j
+@Api(value = "错误信息服务", tags = "错误信息服务-->")
 public class error {
 
     @Autowired
@@ -22,25 +26,35 @@ public class error {
 
     @PostMapping("/report/error")
     @CrossOrigin
-    @ApiOperation(tags = "收集器->上报错误信息", value = "上报错误信息")
-    public Result reportError(@RequestBody ErrorConfig errorConfig) {
+    @ApiOperation("上报错误信息")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "errorConfig", value = "错误信息", dataType = "ErrorConfig", dataTypeClass = ErrorConfig.class)
+    })
+    public AjaxResult reportError(@RequestBody ErrorConfig errorConfig) {
         log.info("错误上报:{}", errorConfig);
         int save = errorServices.save(errorConfig);
         if (save == 0) {
-            return new Result(500, "错误上报失败", "fail");
+            return AjaxResult.error("错误上报失败");
         }
 
-        return new Result(200, "错误上报成功", "success");
+
+        return AjaxResult.success("错误上报成功");
     }
 
     @GetMapping("/error/overflow")
-    @ApiOperation(value = "获取一段时间内的错误概览信息", notes = "根据PID,开始时间,结束时间获取错误信息概览", tags = {"连接器->错误信息统计"})
-    public Result errorOverflow(@RequestParam String pid,
-                                @RequestParam String startDate,
-                                @RequestParam String endDate) {
+    @ApiOperation("获取一段时间内的错误概览信息")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "pid", value = "项目id", dataType = "String", dataTypeClass = String.class),
+            @ApiImplicitParam(name = "startDate", value = "开始时间-时间戳", dataType = "String", dataTypeClass = String.class),
+            @ApiImplicitParam(name = "endDate", value = "结束时间-时间戳", dataType = "String", dataTypeClass = String.class),
+    })
+    public AjaxResult errorOverflow(@RequestParam String pid,
+                                    @RequestParam String startDate,
+                                    @RequestParam String endDate) {
         PageHelper.startPage(1, 30);
         HashMap<String, List<HashMap<String, Object>>> map = errorServices.list(pid, startDate, endDate);
-        return new Result(200, "获取成功", map);
+        return AjaxResult.success("获取成功", map);
+
     }
 
 
@@ -48,15 +62,55 @@ public class error {
      * 获取当天24小时所有错误量
      */
     @GetMapping("/error/getErrorCountListByHour")
-    @ApiOperation(value = "获取当天24小时所有错误量", notes = "根据项目ID获取当天24小时所有错误量", tags = {"连接器->错误信息统计"})
-    public Result getErrorCountListByHour(@RequestParam String pid) {
+    @ApiOperation("获取当天24小时所有错误量")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "pid", value = "项目id", dataType = "String", dataTypeClass = String.class)
+    })
+    public AjaxResult getErrorCountListByHour(@RequestParam String pid) {
         Long startLong = DayUtils.getCurrentStartLong();
         Long endLong = DayUtils.getCurrentEndLong();
 
         log.info("startLong,{},endLong,{}", startLong, endLong);
         HashMap<String, List<HashMap<String, Object>>> map = errorServices.listByHour(pid, startLong.toString(), endLong.toString());
 
-        return new Result(200, "获取成功", map);
+        return AjaxResult.success("获取成功", map);
     }
+
+    @GetMapping("/error/getErrorList")
+    @ApiOperation("获取错误列表")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "pid", value = "项目id", dataType = "String", dataTypeClass = String.class),
+            @ApiImplicitParam(name = "startDate", value = "开始时间-时间戳", dataType = "String", dataTypeClass = String.class),
+            @ApiImplicitParam(name = "endDate", value = "结束时间-时间戳", dataType = "String", dataTypeClass = String.class),
+            @ApiImplicitParam(name = "type", value = "类型", dataType = "String", dataTypeClass = String.class, defaultValue = "",
+                    example = "jsError,console_error")
+
+    })
+    public AjaxResult getErrorList(@RequestParam String pid,
+                                   @RequestParam String startDate,
+                                   @RequestParam String endDate,
+                                   @RequestParam(required = false,
+                                           defaultValue = "") String type) {
+        List<ErrorConfig> list = errorServices.listByType(pid, startDate, endDate, type);
+
+        return AjaxResult.success("获取成功", list);
+    }
+
+    /**
+     * 根据errorId获取详细信息
+     * 采用RESULT风格
+     *
+     * @param errorId
+     * @return
+     */
+    @GetMapping("/error/getErrorById/{errorId}")
+    @ApiOperation("根据errorId获取详细信息")
+    @ApiImplicitParam(name = "errorId", value = "错误id", dataType = "String", dataTypeClass = String.class)
+    public AjaxResult getErrorById(@PathVariable String errorId) {
+        log.info("根据errorId获取详细信息,{}", errorId);
+        ErrorConfig config = errorServices.getErrorConfigById(errorId);
+        return AjaxResult.success("获取成功", config);
+    }
+
 
 }

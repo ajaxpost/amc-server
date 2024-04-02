@@ -150,9 +150,23 @@ public class ErrorServicesImpl implements ErrorServices {
         return getErrorMap(pid, startDate, endDate);
     }
 
+
     @Override
     public synchronized HashMap<String, List<HashMap<String, Object>>> listByHour(String pid, String startDate, String endDate) {
-        day_type = "hh:00";
+        day_type = "HH:00";
         return getErrorMapByHour(pid, startDate, endDate);
+    }
+
+    @Override
+    public List<ErrorConfig> listByType(String pid, String startDate, String endDate, String type) {
+        List<ErrorConfig> list = errorMapper.listByType(pid, startDate, endDate, type);
+        // 降序, 大 -> 小
+        list.sort((o1, o2) -> (int) (o2.getTime() - o1.getTime()));
+        return list;
+    }
+
+    @Override
+    public ErrorConfig getErrorConfigById(String id) {
+        return errorMapper.getErrorConfigById(id);
     }
 }

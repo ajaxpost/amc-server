@@ -10,5 +10,10 @@ public interface ErrorServices {
 
     HashMap<String, List<HashMap<String, Object>>> list(String pid, String startDate, String endDate);
 
+
     HashMap<String, List<HashMap<String, Object>>> listByHour(String pid, String startDate, String endDate);
+
+    List<ErrorConfig> listByType(String pid, String startDate, String endDate, String type);
+
+    ErrorConfig getErrorConfigById(String id);
 }

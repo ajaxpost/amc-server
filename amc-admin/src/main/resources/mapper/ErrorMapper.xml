@@ -51,7 +51,6 @@
 
     <resultMap id="listMap" type="errorConfig">
         <result column="project_id" property="apiKey"/>
-        <result column="uuid" property="routeId"/>
     </resultMap>
 
     <select id="list" resultMap="listMap">
@@ -64,6 +63,32 @@
                 and time between #{startDate} and #{endDate}
             </if>
         </where>
+    </select>
+
+    <select id="listByType" resultMap="listMap">
+        select
+        project_id,
+        error_id,
+        error_msg,
+        type,
+        type,
+        time
+        from error
+        <where>
+            <if test="pid != null">
+                and project_id = #{pid}
+            </if>
+            <if test="startDate != null and endDate != null">
+                and time between #{startDate} and #{endDate}
+            </if>
+            <if test="type != null and type != ''">
+                and type = #{type}
+            </if>
+        </where>
+    </select>
+
+    <select id="getErrorConfigById" resultMap="listMap">
+        select * from error where error_id = #{id}
     </select>
 
 </mapper>

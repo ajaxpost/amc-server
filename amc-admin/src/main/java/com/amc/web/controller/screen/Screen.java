@@ -1,8 +1,8 @@
 package com.amc.web.controller.screen;
 
+import com.amc.core.exception.AjaxResult;
 import com.amc.services.ScreenServices;
 import com.amc.web.domain.RecordScreen;
-import com.amc.web.domain.Result;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,11 +22,11 @@ public class Screen {
     @PostMapping("/report/screen")
     @CrossOrigin
     @ApiOperation(tags = "收集器->上报屏幕信息", value = "上报屏幕信息")
-    public Result reportScreen(@RequestBody RecordScreen recordScreen) {
+    public AjaxResult reportScreen(@RequestBody RecordScreen recordScreen) {
         log.info("屏幕上报:{}", recordScreen);
         int save = screenServices.save(recordScreen);
         if (save == 0)
-            return new Result(500, "屏幕上报失败", "fail");
-        return new Result(200, "屏幕上报成功", "success");
+            return AjaxResult.error("屏幕上报失败");
+        return AjaxResult.success("屏幕上报成功");
     }
 }

@@ -45,6 +45,14 @@ spring:
             drop-table-allow: false
             # 是否允许执行多条 SQL 语句
     type: com.alibaba.druid.pool.DruidDataSource
+  mvc:
+    # 默认情况下,Springboot不会将404视为错误,不会抛出异常
+    # 如果需要抛出异常,需要设置为true
+    throw-exception-if-no-handler-found: true
+  resources:
+    # 默认情况下,SpringBoot是可以访问到你的静态资源的
+    # 如果需要禁止访问,需要设置为false
+    add-mappings: false
   output:
     ansi:
       enabled: detect

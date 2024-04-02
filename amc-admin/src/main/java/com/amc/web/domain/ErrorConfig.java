@@ -1,6 +1,7 @@
 package com.amc.web.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
@@ -10,6 +11,7 @@ import java.util.List;
 @Data
 @ToString
 @Slf4j
+@JsonInclude(JsonInclude.Include.NON_NULL) // 来排除为null的字段,值为null的字段不会返回过去
 public class ErrorConfig {
     private String apiKey;
     private String ip;

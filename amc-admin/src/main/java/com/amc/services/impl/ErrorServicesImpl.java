@@ -145,13 +145,13 @@ public class ErrorServicesImpl implements ErrorServices {
     }
 
     @Override
-    public HashMap<String, List<HashMap<String, Object>>> list(String pid, String startDate, String endDate) {
+    public synchronized HashMap<String, List<HashMap<String, Object>>> list(String pid, String startDate, String endDate) {
         day_type = "yyyy-MM-dd";
         return getErrorMap(pid, startDate, endDate);
     }
 
     @Override
-    public HashMap<String, List<HashMap<String, Object>>> listByHour(String pid, String startDate, String endDate) {
+    public synchronized HashMap<String, List<HashMap<String, Object>>> listByHour(String pid, String startDate, String endDate) {
         day_type = "hh:00";
         return getErrorMapByHour(pid, startDate, endDate);
     }

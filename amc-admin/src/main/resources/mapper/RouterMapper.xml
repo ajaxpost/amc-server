@@ -56,4 +56,32 @@
         select * from pv
         where FROM_UNIXTIME(time / 1000,'%H:00') = #{time}
     </select>
+
+    <select id="selectPvByDay" resultMap="findTimeListMap">
+        select DATE(FROM_UNIXTIME(time / 1000)) as day, count(DATE(FROM_UNIXTIME(time / 1000))) as dayCount from pv
+        where DATE(FROM_UNIXTIME(time / 1000)) between #{startDay} and #{endDay} GROUP BY day
+    </select>
+
+    <!--
+    count(user_id): 统计user_id的数量
+    count(DISTINCT user_id): 统计user_id的去重数量
+    -->
+    <select id="selectUvByDay" resultMap="findTimeListMap">
+        select DATE(FROM_UNIXTIME(time / 1000)) as day,count(DISTINCT user_id) as dayCount from pv
+        WHERE DATE(FROM_UNIXTIME(time / 1000)) between #{startDay} and #{endDay} GROUP BY day
+    </select>
+
+    <select id="selectNewUvByDay" resultMap="findTimeListMap">
+        select DATE(FROM_UNIXTIME(time / 1000)) as day,user_id,count(DISTINCT DATE(FROM_UNIXTIME(time / 1000))) as
+        dayCount from pv
+        where DATE(FROM_UNIXTIME(time / 1000)) between #{startDay} and #{endDay}
+        HAVING user_id not in
+        (select user_id from pv where DATE(FROM_UNIXTIME(time / 1000)) not between #{startDay} and #{endDay} GROUP BY
+        user_id)
+    </select>
+
+    <select id="selectIpByDay" resultMap="findTimeListMap">
+        select DATE(FROM_UNIXTIME(time / 1000)) as day,count(DISTINCT ip) as dayCount from pv
+        where DATE(FROM_UNIXTIME(time / 1000)) between #{startDay} and #{endDay} GROUP BY day
+    </select>
 </mapper>

@@ -6,6 +6,9 @@ import com.amc.services.ProjectServices;
 import com.amc.web.domain.ProjectPOJO;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,13 +18,19 @@ import java.util.List;
 
 @RestController
 @Slf4j
+@Api(value = "项目信息服务", tags = "项目信息服务-->")
 public class Project {
 
     @Autowired
     private ProjectServices projectServices;
 
     @GetMapping("/getProject")
-    @ApiOperation(value = "获取项目列表", notes = "获取项目列表", tags = {"连接器->获取项目信息"})
+    @ApiOperation(value = "获取项目列表")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "pageNum", value = "页码", dataType = "Integer", dataTypeClass = Integer.class),
+            @ApiImplicitParam(name = "pageSize", value = "每页数量", dataType = "Integer", dataTypeClass = Integer.class),
+            @ApiImplicitParam(name = "name", value = "项目名称", dataType = "String", dataTypeClass = String.class)
+    })
     public TableDataInfo getProject(@RequestParam(required = false, defaultValue = "1") Integer pageNum,
                                     @RequestParam(required = false, defaultValue = "10") Integer pageSize,
                                     @RequestParam(required = false, defaultValue = "") String name) {
@@ -36,7 +45,10 @@ public class Project {
     }
 
     @PostMapping("/saveProject")
-    @ApiOperation(value = "新建项目", notes = "新建项目", tags = {"连接器->保存项目信息"})
+    @ApiOperation(value = "新建项目")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "projectPOJO", value = "项目信息", dataType = "ProjectPOJO", dataTypeClass = ProjectPOJO.class)
+    })
     public AjaxResult saveProject(@RequestBody ProjectPOJO projectPOJO) {
         int save = projectServices.save(projectPOJO);
         if (save == 0) {

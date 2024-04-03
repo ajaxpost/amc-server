@@ -15,7 +15,9 @@ then
     exit 1
 fi
 
-
+# 不建议使用这个
+# 还是手动上传好
+# 因为之前的java程序可能还在运行,你就给之前的那个删了,可能导致运行了多个
 function rz(){
   # 打包
   mvn clean package

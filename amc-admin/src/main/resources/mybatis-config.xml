@@ -7,6 +7,7 @@
         <!-- 指定 MyBatis 所用日志的具体实现 -->
         <setting name="logImpl" value="SLF4J"/>
         <!-- 使用驼峰命名法转换字段 -->
+        <!--如果启用驼峰命名转化,默认对应的字段就是转化后的,不能是相同的字段了,以后还是建议不要开启这个-->
         <setting name="mapUnderscoreToCamelCase" value="true"/>
         <!-- 使全局的映射器启用或禁用缓存 -->
         <setting name="cacheEnabled" value="true"/>

@@ -1,4 +1,4 @@
-package com.amc.core.exception;
+package com.amc.core.domain;
 
 import java.util.HashMap;
 

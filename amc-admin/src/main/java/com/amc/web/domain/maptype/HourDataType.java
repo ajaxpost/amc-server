@@ -9,7 +9,7 @@ import lombok.ToString;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class TodayDataType {
-    private String day;
-    private Integer dayCount;
+public class HourDataType {
+    private String hour;
+    private Integer count;
 }

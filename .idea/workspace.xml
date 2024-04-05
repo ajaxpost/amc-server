@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2486309a-3c0d-46e5-8a27-7036c50fdd92" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/TodayFlowPOJO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/maptype/TodayDataType.java" afterDir="false" />
+    <list default="true" id="2486309a-3c0d-46e5-8a27-7036c50fdd92" name="Default Changelist" comment="Default Changelist">
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/CountByHour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/maptype/HourDataType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-core/src/main/java/com/amc/core/domain/R.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/controller/FileController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/exception/CustomException.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/exception/CustomHandlerExceptionReslove.java" afterDir="false" />
@@ -38,19 +39,24 @@
       <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/resources/mapper/AccountMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../java_web/forum.rar" beforeDir="false" afterPath="$PROJECT_DIR$/../../java_web/forum.rar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/mapper/RouterMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/mapper/RouterMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/RouterServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/RouterServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/impl/RouterServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/impl/RouterServicesImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/error/error.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/error/error.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/performance/Per.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/performance/Per.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/project/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/project/Project.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/pv_uv/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/pv_uv/Router.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/screen/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/screen/Screen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/Breadcrumb.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/Breadcrumb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/ErrorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/ErrorConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/ProjectPOJO.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/ProjectPOJO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/PvPOJO.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/PvPOJO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/RecordScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/RecordScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/RouterMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/RouterMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc.sh" beforeDir="false" afterPath="$PROJECT_DIR$/amc.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-core/src/main/java/com/amc/core/TableDataInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-core/src/main/java/com/amc/core/domain/TableDataInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-core/src/main/java/com/amc/core/exception/AjaxResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-core/src/main/java/com/amc/core/domain/AjaxResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-core/src/main/java/com/amc/core/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-core/src/main/java/com/amc/core/exception/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../boot-05/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-05/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/MainApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/controller/ParamsTestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/controller/ParamsTestController.java" afterDir="false" />
@@ -93,6 +99,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://E:/apache-maven-3.6.1/mvn_resp/org/springframework/boot/spring-boot/2.3.4.RELEASE/spring-boot-2.3.4.RELEASE-sources.jar!/org/springframework/boot/context/logging/LoggingApplicationListener.java" root0="SKIP_INSPECTION" />
@@ -133,30 +140,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;JAR 应用程序.amc-admin-0.0.1.jar.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.amc-admin [clean,package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.amc-server [clean,package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.amc-server [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.amc-server [package].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/javacode/spring-boot/amc-server&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;应用程序.Main.executor&quot;: &quot;Run&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
+    "JAR 应用程序.amc-admin-0.0.1.jar.executor": "Run",
+    "Maven.amc-admin [clean,package].executor": "Run",
+    "Maven.amc-server [clean,package].executor": "Run",
+    "Maven.amc-server [clean].executor": "Run",
+    "Maven.amc-server [package].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/OneDrive/桌面/RuoYi-Vue-master",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "应用程序.Main.executor": "Run"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\javacode\spring-boot\amc-server\amc-admin\src\main\resources" />

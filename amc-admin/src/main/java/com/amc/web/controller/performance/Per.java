@@ -1,6 +1,6 @@
 package com.amc.web.controller.performance;
 
-import com.amc.core.exception.AjaxResult;
+import com.amc.core.domain.R;
 import com.amc.services.PerServices;
 import com.amc.web.domain.PerConfig;
 import io.swagger.annotations.Api;
@@ -21,12 +21,12 @@ public class Per {
     @CrossOrigin
     @PostMapping("/esc")
     @ApiOperation(value = "上报性能信息")
-    public AjaxResult esc(@RequestBody PerConfig perConfig) {
+    public R<String> esc(@RequestBody PerConfig perConfig) {
         log.info("性能上报:{}", perConfig);
         int save = perServices.save(perConfig);
         if (save == 0) {
-            return AjaxResult.error("性能上报失败");
+            return R.fail("性能上报失败");
         }
-        return AjaxResult.success("性能上报成功");
+        return R.ok("性能上报成功");
     }
 }

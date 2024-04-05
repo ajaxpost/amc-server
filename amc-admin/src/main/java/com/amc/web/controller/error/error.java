@@ -1,7 +1,7 @@
 package com.amc.web.controller.error;
 
 import com.amc.core.DayUtils;
-import com.amc.core.exception.AjaxResult;
+import com.amc.core.domain.R;
 import com.amc.services.ErrorServices;
 import com.amc.web.domain.ErrorConfig;
 import com.github.pagehelper.PageHelper;
@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @Slf4j
@@ -30,15 +31,15 @@ public class error {
     @ApiImplicitParams({
             @ApiImplicitParam(name = "errorConfig", value = "错误信息", dataType = "ErrorConfig", dataTypeClass = ErrorConfig.class)
     })
-    public AjaxResult reportError(@RequestBody ErrorConfig errorConfig) {
+    public R<String> reportError(@RequestBody ErrorConfig errorConfig) {
         log.info("错误上报:{}", errorConfig);
         int save = errorServices.save(errorConfig);
         if (save == 0) {
-            return AjaxResult.error("错误上报失败");
+            return R.fail("错误上报失败");
         }
 
 
-        return AjaxResult.success("错误上报成功");
+        return R.ok("错误上报成功");
     }
 
     @GetMapping("/error/overflow")
@@ -48,12 +49,12 @@ public class error {
             @ApiImplicitParam(name = "startDate", value = "开始时间-时间戳", dataType = "String", dataTypeClass = String.class),
             @ApiImplicitParam(name = "endDate", value = "结束时间-时间戳", dataType = "String", dataTypeClass = String.class),
     })
-    public AjaxResult errorOverflow(@RequestParam String pid,
-                                    @RequestParam String startDate,
-                                    @RequestParam String endDate) {
+    public R<Map<String, List<HashMap<String, Object>>>> errorOverflow(@RequestParam String pid,
+                                                                       @RequestParam String startDate,
+                                                                       @RequestParam String endDate) {
         PageHelper.startPage(1, 30);
         HashMap<String, List<HashMap<String, Object>>> map = errorServices.list(pid, startDate, endDate);
-        return AjaxResult.success("获取成功", map);
+        return R.ok(map, "获取成功");
 
     }
 
@@ -66,14 +67,14 @@ public class error {
     @ApiImplicitParams({
             @ApiImplicitParam(name = "pid", value = "项目id", dataType = "String", dataTypeClass = String.class)
     })
-    public AjaxResult getErrorCountListByHour(@RequestParam String pid) {
+    public R<Map<String, List<HashMap<String, Object>>>> getErrorCountListByHour(@RequestParam String pid) {
         Long startLong = DayUtils.getCurrentStartLong();
         Long endLong = DayUtils.getCurrentEndLong();
 
         log.info("startLong,{},endLong,{}", startLong, endLong);
         HashMap<String, List<HashMap<String, Object>>> map = errorServices.listByHour(pid, startLong.toString(), endLong.toString());
 
-        return AjaxResult.success("获取成功", map);
+        return R.ok(map, "获取成功");
     }
 
     @GetMapping("/error/getErrorList")
@@ -86,14 +87,14 @@ public class error {
                     example = "jsError,console_error")
 
     })
-    public AjaxResult getErrorList(@RequestParam String pid,
-                                   @RequestParam String startDate,
-                                   @RequestParam String endDate,
-                                   @RequestParam(required = false,
-                                           defaultValue = "") String type) {
+    public R<List<ErrorConfig>> getErrorList(@RequestParam String pid,
+                                             @RequestParam String startDate,
+                                             @RequestParam String endDate,
+                                             @RequestParam(required = false,
+                                                     defaultValue = "") String type) {
         List<ErrorConfig> list = errorServices.listByType(pid, startDate, endDate, type);
 
-        return AjaxResult.success("获取成功", list);
+        return R.ok(list, "获取成功");
     }
 
     /**
@@ -106,10 +107,10 @@ public class error {
     @GetMapping("/error/getErrorById/{errorId}")
     @ApiOperation("根据errorId获取详细信息")
     @ApiImplicitParam(name = "errorId", value = "错误id", dataType = "String", dataTypeClass = String.class)
-    public AjaxResult getErrorById(@PathVariable String errorId) {
+    public R<ErrorConfig> getErrorById(@PathVariable String errorId) {
         log.info("根据errorId获取详细信息,{}", errorId);
         ErrorConfig config = errorServices.getErrorConfigById(errorId);
-        return AjaxResult.success("获取成功", config);
+        return R.ok(config, "获取成功");
     }
 
 

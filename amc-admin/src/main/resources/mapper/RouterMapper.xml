@@ -57,31 +57,61 @@
         where FROM_UNIXTIME(time / 1000,'%H:00') = #{time}
     </select>
 
-    <select id="selectPvByDay" resultMap="findTimeListMap">
+    <select id="selectPvByDay" resultType="todayDataType">
         select DATE(FROM_UNIXTIME(time / 1000)) as day, count(DATE(FROM_UNIXTIME(time / 1000))) as dayCount from pv
-        where DATE(FROM_UNIXTIME(time / 1000)) between #{startDay} and #{endDay} GROUP BY day
+        where project_id = #{pid} and DATE(FROM_UNIXTIME(time / 1000)) between #{startDay} and #{endDay} GROUP BY day
     </select>
 
     <!--
     count(user_id): 统计user_id的数量
     count(DISTINCT user_id): 统计user_id的去重数量
     -->
-    <select id="selectUvByDay" resultMap="findTimeListMap">
+    <select id="selectUvByDay" resultType="todayDataType">
         select DATE(FROM_UNIXTIME(time / 1000)) as day,count(DISTINCT user_id) as dayCount from pv
-        WHERE DATE(FROM_UNIXTIME(time / 1000)) between #{startDay} and #{endDay} GROUP BY day
+        WHERE project_id = #{pid} and DATE(FROM_UNIXTIME(time / 1000)) between #{startDay} and #{endDay} GROUP BY day
     </select>
 
-    <select id="selectNewUvByDay" resultMap="findTimeListMap">
-        select DATE(FROM_UNIXTIME(time / 1000)) as day,user_id,count(DISTINCT DATE(FROM_UNIXTIME(time / 1000))) as
-        dayCount from pv
-        where DATE(FROM_UNIXTIME(time / 1000)) between #{startDay} and #{endDay}
-        HAVING user_id not in
-        (select user_id from pv where DATE(FROM_UNIXTIME(time / 1000)) not between #{startDay} and #{endDay} GROUP BY
-        user_id)
+    <select id="selectNewUvByDay" resultType="todayDataType">
+        select day,count(day) as dayCount from (
+        select DATE(FROM_UNIXTIME(time / 1000)) as day,user_id from pv where project_id = #{pid} and
+        DATE(FROM_UNIXTIME(time / 1000)) between
+        #{startDay} and #{endDay} group by user_id
+        ) as t1 where user_id not in (
+        select user_id from pv where project_id = #{pid} and DATE(FROM_UNIXTIME(time / 1000)) not between #{startDay}
+        and #{endDay} GROUP BY
+        user_id
+        ) GROUP BY day
     </select>
 
-    <select id="selectIpByDay" resultMap="findTimeListMap">
+    <select id="selectIpByDay" resultType="todayDataType">
         select DATE(FROM_UNIXTIME(time / 1000)) as day,count(DISTINCT ip) as dayCount from pv
-        where DATE(FROM_UNIXTIME(time / 1000)) between #{startDay} and #{endDay} GROUP BY day
+        where project_id = #{pid} and DATE(FROM_UNIXTIME(time / 1000)) between #{startDay} and #{endDay} GROUP BY day
+    </select>
+
+    <select id="selectPvByHour" resultType="hourDataType">
+        SELECT FROM_UNIXTIME(time / 1000,'%m-%d %H') as hour,count(user_id) as count from
+        pv
+        where project_id = #{pid} and FROM_UNIXTIME(time / 1000,'%Y-%m-%d %H') between
+        #{startTime} and #{endTime} GROUP BY hour
+    </select>
+
+    <select id="selectUvByHour" resultType="hourDataType">
+        SELECT FROM_UNIXTIME(time / 1000,'%m-%d %H') as hour,count(DISTINCT user_id) as count from
+        pv
+        where project_id = #{pid} and FROM_UNIXTIME(time / 1000,'%Y-%m-%d %H') between
+        #{startTime} and #{endTime} GROUP BY hour
+    </select>
+
+    <select id="selectNewUvByHour" resultType="hourDataType">
+        select hour,count(hour) as count from (
+        select FROM_UNIXTIME(time / 1000,'%m-%d %H') as hour,user_id from pv where project_id = #{pid} and
+        FROM_UNIXTIME(time / 1000,'%Y-%m-%d %H') between
+        #{startTime} and #{endTime} group by user_id
+        ) as t1 where user_id not in (
+        select user_id from pv where project_id = #{pid} and FROM_UNIXTIME(time / 1000,'%Y-%m-%d %H') not between
+        #{startTime}
+        and #{endTime} GROUP BY
+        user_id
+        ) GROUP BY hour
     </select>
 </mapper>

@@ -1,7 +1,7 @@
 package com.amc.web.controller.project;
 
-import com.amc.core.TableDataInfo;
-import com.amc.core.exception.AjaxResult;
+import com.amc.core.domain.R;
+import com.amc.core.domain.TableDataInfo;
 import com.amc.services.ProjectServices;
 import com.amc.web.domain.ProjectPOJO;
 import com.github.pagehelper.PageHelper;
@@ -31,13 +31,13 @@ public class Project {
             @ApiImplicitParam(name = "pageSize", value = "每页数量", dataType = "Integer", dataTypeClass = Integer.class),
             @ApiImplicitParam(name = "name", value = "项目名称", dataType = "String", dataTypeClass = String.class)
     })
-    public TableDataInfo getProject(@RequestParam(required = false, defaultValue = "1") Integer pageNum,
-                                    @RequestParam(required = false, defaultValue = "10") Integer pageSize,
-                                    @RequestParam(required = false, defaultValue = "") String name) {
+    public TableDataInfo<ProjectPOJO> getProject(@RequestParam(required = false, defaultValue = "1") Integer pageNum,
+                                                 @RequestParam(required = false, defaultValue = "10") Integer pageSize,
+                                                 @RequestParam(required = false, defaultValue = "") String name) {
         PageHelper.startPage(pageNum, pageSize);
         List<ProjectPOJO> list = projectServices.list(name);
         PageInfo<ProjectPOJO> pageInfo = new PageInfo<>(list);
-        TableDataInfo dataInfo = new TableDataInfo();
+        TableDataInfo<ProjectPOJO> dataInfo = new TableDataInfo<>();
         dataInfo.setCode(200);
         dataInfo.setData(list);
         dataInfo.setTotal(pageInfo.getTotal());
@@ -49,12 +49,12 @@ public class Project {
     @ApiImplicitParams({
             @ApiImplicitParam(name = "projectPOJO", value = "项目信息", dataType = "ProjectPOJO", dataTypeClass = ProjectPOJO.class)
     })
-    public AjaxResult saveProject(@RequestBody ProjectPOJO projectPOJO) {
+    public R<String> saveProject(@RequestBody ProjectPOJO projectPOJO) {
         int save = projectServices.save(projectPOJO);
         if (save == 0) {
-            return AjaxResult.error("新建项目失败");
+            return R.fail();
         }
-        return AjaxResult.success("新建项目成功");
+        return R.ok();
     }
 
 }

@@ -1,4 +1,4 @@
-package com.amc.core;
+package com.amc.core.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,11 +12,11 @@ import java.util.List;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class TableDataInfo implements Serializable {
+public class TableDataInfo<T> implements Serializable {
 
     private Long total;
 
-    private List<?> data;
+    private List<T> data;
 
     private int code;
 

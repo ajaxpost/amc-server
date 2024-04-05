@@ -1,12 +1,14 @@
 package com.amc.web.domain;
 
+import io.swagger.annotations.ApiModel;
 import lombok.Data;
 import lombok.ToString;
 
 @Data
 @ToString
+@ApiModel("屏幕信息")
 public class RecordScreen {
-
+    
     private String apiKey;
     private DeviceInfo deviceInfo;
     private String events;

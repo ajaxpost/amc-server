@@ -72,12 +72,13 @@
     </select>
 
     <select id="selectNewUvByDay" resultMap="findTimeListMap">
-        select DATE(FROM_UNIXTIME(time / 1000)) as day,user_id,count(DISTINCT DATE(FROM_UNIXTIME(time / 1000))) as
-        dayCount from pv
-        where DATE(FROM_UNIXTIME(time / 1000)) between #{startDay} and #{endDay}
-        HAVING user_id not in
-        (select user_id from pv where DATE(FROM_UNIXTIME(time / 1000)) not between #{startDay} and #{endDay} GROUP BY
-        user_id)
+        select day,count(day) as dayCount from (
+        select DATE(FROM_UNIXTIME(time / 1000)) as day,user_id from pv where DATE(FROM_UNIXTIME(time / 1000)) between
+        #{startDay} and #{endDay} group by user_id
+        ) as t1 where user_id not in (
+        select user_id from pv where DATE(FROM_UNIXTIME(time / 1000)) not between #{startDay} and #{endDay} GROUP BY
+        user_id
+        ) GROUP BY day
     </select>
 
     <select id="selectIpByDay" resultMap="findTimeListMap">

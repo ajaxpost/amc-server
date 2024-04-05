@@ -30,9 +30,9 @@ function rz(){
 
 function start()
 {
-    PID=`ps -ef |grep java|grep $AppName`
-
-
+    # shell 中 反引号里面的内容会被当做命令来执行
+    # awk '{print $2}' 会打印出第二列的数据,也就是进程id
+    PID=`ps -ef |grep java|grep $AppName|awk '{print $2}'`
     if [ x"$PID" != x"" ]; then
         echo "$AppName is running..."
     else
@@ -45,11 +45,13 @@ function stop(){
   echo "Stop $AppName"
   PID=""
   query(){
-    PID=`ps -ef |grep java|grep $AppName`
+    PID=`ps -ef |grep java|grep $AppName|awk '{print $2}'`
   }
   query
   if [ x"$PID" != x"" ]; then
-    kill -9 $PID
+    # 与kill -9 区别是 -TERM 会执行清理工作,然后在退出,这样可以保证进程在退出时,能够正确的释放资源
+    # 相比较 kill -9 / -KILL 会强制结束进程,可能会导致进程在没有正确清理资源下被终止
+    kill -TERM $PID
     echo "$AppName (pid:$PID) exiting..."
     # do while 循环,直到进程结束
 		while [ x"$PID" != x"" ]
@@ -101,5 +103,6 @@ case $1 in
     rz
     ;;
   *)
+    echo -e "\033[0;31m 未知操作名 \033[0m  \033[0;34m {start|stop|restart|status} \033[0m"
     ;;
 esac

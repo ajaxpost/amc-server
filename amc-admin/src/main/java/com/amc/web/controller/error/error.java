@@ -114,4 +114,19 @@ public class error {
     }
 
 
+    @GetMapping("/error/getErrorCountByNum")
+    @ApiOperation(value = "获取错误数量以及影响用户数量", notes = "返回结果:  c1 错误总数量, c2 影响用户数量")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "pid", value = "项目id", dataType = "String", dataTypeClass = String.class),
+            @ApiImplicitParam(name = "errorMsg", value = "错误信息", dataType = "String", dataTypeClass = String.class),
+            @ApiImplicitParam(name = "errorId", value = "错误id", dataType = "String", dataTypeClass = String.class)
+    })
+    public R<Map<String, Integer>> getErrorCountByNum(@RequestParam String pid,
+                                                      @RequestParam String errorMsg,
+                                                      @RequestParam String errorId
+    ) {
+        Map<String, Integer> errorCountByNum = errorServices.getErrorCountByNum(pid, errorMsg, errorId);
+        return R.ok(errorCountByNum, "获取成功");
+    }
+
 }

@@ -4,6 +4,7 @@ import com.amc.web.domain.ErrorConfig;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public interface ErrorServices {
     int save(ErrorConfig errorConfig);
@@ -16,4 +17,7 @@ public interface ErrorServices {
     List<ErrorConfig> listByType(String pid, String startDate, String endDate, String type);
 
     ErrorConfig getErrorConfigById(String id);
+
+    Map<String, Integer> getErrorCountByNum(String pid, String errorMsg, String errorId);
+
 }

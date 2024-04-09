@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2486309a-3c0d-46e5-8a27-7036c50fdd92" name="Default Changelist" comment="Default Changelist">
-      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/CountByHour.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/maptype/HourDataType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/amc-core/src/main/java/com/amc/core/domain/R.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-05/files/登录.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-05/files/进度.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-05/files/问题.docx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/controller/FileController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/exception/CustomException.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/exception/CustomHandlerExceptionReslove.java" afterDir="false" />
@@ -19,7 +19,26 @@
       <change afterPath="$PROJECT_DIR$/../boot-05/src/main/resources/haha/CSS/styles.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../boot-05/src/main/resources/haha/error/404.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../boot-05/src/main/resources/haha/error/5xx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-05/target/classes/com/example/controller/FileController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-05/target/classes/com/example/exception/CustomException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-05/target/classes/com/example/exception/CustomHandlerExceptionReslove.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-05/target/classes/com/example/exception/UserException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-05/target/classes/com/example/servlet/config/config.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-05/target/classes/com/example/servlet/myFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-05/target/classes/com/example/servlet/myListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-05/target/classes/com/example/servlet/myServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-05/target/classes/haha/CSS/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-05/target/classes/haha/error/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-05/target/classes/haha/error/5xx.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-05/动画.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/boot-06-jdbc.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/pom.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/java/com/example/Main.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/java/com/example/config/ConfigTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/java/com/example/config/DataSourceConfig.java" afterDir="false" />
@@ -37,26 +56,43 @@
       <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/resources/META-INF/111.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/resources/application.yml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/src/main/resources/mapper/AccountMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/boot-06-jdbc-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/boot-06-jdbc-1.0-SNAPSHOT.jar.original" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/classes/META-INF/111.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/classes/META-INF/boot-06-jdbc.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/classes/com/example/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/classes/com/example/config/ConfigTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/classes/com/example/config/DataSourceConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/classes/com/example/config/MybatisConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/classes/com/example/controller/HelloController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/classes/com/example/domain/Account.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/classes/com/example/domain/Person.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/classes/com/example/domain/Pet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/classes/com/example/domain/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/classes/com/example/mapper/AccountMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/classes/com/example/mapper/UserMapper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/classes/com/example/services/AccountServices.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/classes/com/example/services/UserServices.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/classes/com/example/services/impl/UserServicesImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/classes/mapper/AccountMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../java_web/forum.rar" beforeDir="false" afterPath="$PROJECT_DIR$/../../java_web/forum.rar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/mapper/RouterMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/mapper/RouterMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/mapper/ErrorMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/mapper/ErrorMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/ErrorServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/ErrorServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/RouterServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/RouterServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/impl/ErrorServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/impl/ErrorServicesImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/impl/RouterServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/impl/RouterServicesImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/error/error.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/error/error.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/performance/Per.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/performance/Per.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/project/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/project/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/pv_uv/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/pv_uv/Router.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/screen/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/screen/Screen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/Breadcrumb.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/Breadcrumb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/ErrorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/ErrorConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/ProjectPOJO.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/ProjectPOJO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/PvPOJO.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/PvPOJO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/RecordScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/RecordScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/ErrorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/ErrorMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/RouterMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/RouterMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-core/src/main/java/com/amc/core/TableDataInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-core/src/main/java/com/amc/core/domain/TableDataInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-core/src/main/java/com/amc/core/exception/AjaxResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-core/src/main/java/com/amc/core/domain/AjaxResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-core/src/main/java/com/amc/core/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-core/src/main/java/com/amc/core/exception/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../boot-05/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-05/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/MainApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/controller/ParamsTestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/controller/ParamsTestController.java" afterDir="false" />
@@ -70,6 +106,11 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="repository" />
+    </option>
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -140,30 +181,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Main.executor": "Run",
-    "JAR 应用程序.amc-admin-0.0.1.jar.executor": "Run",
-    "Maven.amc-admin [clean,package].executor": "Run",
-    "Maven.amc-server [clean,package].executor": "Run",
-    "Maven.amc-server [clean].executor": "Run",
-    "Maven.amc-server [package].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/OneDrive/桌面/RuoYi-Vue-master",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "应用程序.Main.executor": "Run"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JAR 应用程序.amc-admin-0.0.1.jar.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.amc-admin [clean,package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.amc-server [clean,package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.amc-server [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.amc-server [package].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/OneDrive/桌面/RuoYi-Vue-master&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;应用程序.Main.executor&quot;: &quot;Run&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\javacode\spring-boot\amc-server\amc-admin\src\main\resources" />
@@ -205,8 +246,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.Main" />
         <item itemvalue="JAR 应用程序.amc-admin-0.0.1.jar" />
+        <item itemvalue="应用程序.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -234,6 +275,12 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Default Changelist" />
+    <MESSAGE value="feat(PV_router): amc控制台主要对于pv,uv流量数据的获取&#10;&#10;[skip ci]" />
+    <MESSAGE value="【1】对于shell脚本的调整，学习到了很多【2】新增接口对于pv，uv流量数据的获取" />
+    <option name="LAST_COMMIT_MESSAGE" value="【1】对于shell脚本的调整，学习到了很多【2】新增接口对于pv，uv流量数据的获取" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

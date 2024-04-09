@@ -91,4 +91,25 @@
         select * from error where error_id = #{id}
     </select>
 
+    <select id="selectErrorCountByNum" resultType="map">
+        select count(user_id) as c1 ,count(DISTINCT user_id) as c2 from error
+        <where>
+            <if test="pid != null">
+                and project_id = #{pid}
+            </if>
+            <if test="errorMsg != null">
+                and error_msg = #{errorMsg}
+            </if>
+            <if test="errorId != null">
+                and error_stack in (SELECT
+                error_stack
+                FROM
+                error
+                WHERE
+                project_id = #{pid}
+                AND error_id = #{errorId})
+            </if>
+        </where>
+    </select>
+
 </mapper>

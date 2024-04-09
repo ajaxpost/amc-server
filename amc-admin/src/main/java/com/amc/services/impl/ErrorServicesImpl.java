@@ -11,10 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 import static jdk.nashorn.internal.objects.Global.Infinity;
 
@@ -168,5 +165,10 @@ public class ErrorServicesImpl implements ErrorServices {
     @Override
     public ErrorConfig getErrorConfigById(String id) {
         return errorMapper.getErrorConfigById(id);
+    }
+
+    @Override
+    public Map<String, Integer> getErrorCountByNum(String pid, String errorMsg, String errorId) {
+        return errorMapper.selectErrorCountByNum(pid, errorMsg, errorId);
     }
 }

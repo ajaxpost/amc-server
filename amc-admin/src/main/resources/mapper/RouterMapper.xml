@@ -114,4 +114,6 @@
         user_id
         ) GROUP BY hour
     </select>
+
+
 </mapper>

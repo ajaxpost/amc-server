@@ -226,4 +226,5 @@ public class RouterServicesImpl implements RouterServices {
         return new CountByHour(_yesterData, _todayData);
     }
 
+
 }

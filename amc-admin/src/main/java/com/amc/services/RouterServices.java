@@ -22,4 +22,5 @@ public interface RouterServices {
     CountByHour getUvCountByHour(String pid, Integer scope);
 
     CountByHour getNewCustomerCountByHour(String pid, Integer scope);
+
 }

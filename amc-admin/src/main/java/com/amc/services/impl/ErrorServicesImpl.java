@@ -6,11 +6,15 @@ import com.amc.mapper.RouterMapper;
 import com.amc.services.ErrorServices;
 import com.amc.web.domain.ErrorConfig;
 import com.amc.web.domain.PvPOJO;
+import com.amc.web.domain.maptype.HourDataType;
+import com.amc.web.domain.maptype.MinuteDataType;
 import com.github.pagehelper.PageHelper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 import static jdk.nashorn.internal.objects.Global.Infinity;
@@ -170,5 +174,38 @@ public class ErrorServicesImpl implements ErrorServices {
     @Override
     public Map<String, Integer> getErrorCountByNum(String pid, String errorMsg, String errorId) {
         return errorMapper.selectErrorCountByNum(pid, errorMsg, errorId);
+    }
+
+    @Override
+    public List<HourDataType> getJavascriptErrorCountListByHour(String pid, String errorMsg) {
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd HH");
+        HourDataType[] hourDataTypes = new HourDataType[24];
+        for (int i = 0; i < hourDataTypes.length; i++) {
+            LocalDateTime dateTime = now.minusHours(i);
+            String format1 = dateTime.format(formatter);
+            hourDataTypes[i] = new HourDataType();
+            hourDataTypes[i].setHour(format1);
+            hourDataTypes[i].setCount(0);
+        }
+        List<HourDataType> list = errorMapper.selectErrorCountListByHour(pid, now.toString(), errorMsg);
+        for (HourDataType hourDataType : list) {
+            String hour = hourDataType.getHour();
+            for (int i = 0; i < 24; i++) {
+                if (hour.equals(hourDataTypes[i].getHour())) {
+                    hourDataTypes[i].setCount(hourDataType.getCount());
+                    break;
+                }
+            }
+        }
+        List<HourDataType> typeList = Arrays.asList(hourDataTypes);
+        typeList.sort(Comparator.comparing(HourDataType::getHour));
+        return typeList;
+    }
+
+    @Override
+    public List<MinuteDataType> getJavascriptErrorCountByMinute(String pid, String errorMsg, String timeHour) {
+        String s = DayUtils.timestamptoDateString(Long.parseLong(timeHour), "yyyy-MM-dd HH");
+        return errorMapper.selectErrorCountListByMinute(pid, errorMsg, s);
     }
 }

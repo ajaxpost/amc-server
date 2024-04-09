@@ -4,6 +4,8 @@ import com.amc.core.DayUtils;
 import com.amc.core.domain.R;
 import com.amc.services.ErrorServices;
 import com.amc.web.domain.ErrorConfig;
+import com.amc.web.domain.maptype.HourDataType;
+import com.amc.web.domain.maptype.MinuteDataType;
 import com.github.pagehelper.PageHelper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -127,6 +129,32 @@ public class error {
     ) {
         Map<String, Integer> errorCountByNum = errorServices.getErrorCountByNum(pid, errorMsg, errorId);
         return R.ok(errorCountByNum, "获取成功");
+    }
+
+    @GetMapping("/error/getJavascriptErrorCountListByHour")
+    @ApiOperation("获取当天24小时所有js错误量")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "pid", value = "项目id", dataType = "String", dataTypeClass = String.class),
+            @ApiImplicitParam(name = "errorMsg", value = "错误信息", dataType = "String", dataTypeClass = String.class)
+    })
+    public R<List<HourDataType>> getJavascriptErrorCountListByHour(@RequestParam String pid,
+                                                                   @RequestParam String errorMsg) {
+        List<HourDataType> listByHour = errorServices.getJavascriptErrorCountListByHour(pid, errorMsg);
+        return R.ok(listByHour);
+    }
+
+    @GetMapping("/error/getJavascriptErrorCountByMinute")
+    @ApiOperation("获取某个小时内的js错误量")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "pid", value = "项目id", dataType = "String", dataTypeClass = String.class),
+            @ApiImplicitParam(name = "errorMsg", value = "错误信息", dataType = "String", dataTypeClass = String.class),
+            @ApiImplicitParam(name = "timeHour", value = "时间段->时间戳", dataType = "Integer", dataTypeClass = Integer.class, example = "1712624400000")
+    })
+    public R<List<MinuteDataType>> getJavascriptErrorCountByMinute(@RequestParam String pid,
+                                                                   @RequestParam String errorMsg,
+                                                                   @RequestParam String timeHour) {
+        List<MinuteDataType> errorCountByMinute = errorServices.getJavascriptErrorCountByMinute(pid, errorMsg, timeHour);
+        return R.ok(errorCountByMinute);
     }
 
 }

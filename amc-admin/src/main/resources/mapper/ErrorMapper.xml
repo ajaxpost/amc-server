@@ -112,4 +112,26 @@
         </where>
     </select>
 
+    <select id="selectErrorCountListByHour" resultType="hourDataType">
+        select FROM_UNIXTIME(time / 1000,"%m-%d %H") as hour,count(FROM_UNIXTIME(time / 1000,"%m-%d %H")) as count from
+        error
+        where project_id = #{pid}
+        and
+        FROM_UNIXTIME(time / 1000,"%Y-%m-%d") = #{day}
+        and error_msg = #{errorMsg}
+        GROUP BY hour
+    </select>
+
+    <select id="selectErrorCountListByMinute" resultType="minuteDataType">
+        select FROM_UNIXTIME(time / 1000,"%H:%i") as minute,count(FROM_UNIXTIME(time / 1000,"%H:%i"))
+        as count from error
+        where
+        project_id = #{pid}
+        and
+        error_msg = #{errorMsg}
+        and
+        FROM_UNIXTIME(time / 1000,"%Y-%m-%d %H") = #{day}
+        GROUP BY minute
+    </select>
+
 </mapper>

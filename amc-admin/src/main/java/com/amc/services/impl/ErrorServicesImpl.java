@@ -180,6 +180,7 @@ public class ErrorServicesImpl implements ErrorServices {
     public List<HourDataType> getJavascriptErrorCountListByHour(String pid, String errorMsg) {
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd HH");
+        DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         HourDataType[] hourDataTypes = new HourDataType[24];
         for (int i = 0; i < hourDataTypes.length; i++) {
             LocalDateTime dateTime = now.minusHours(i);
@@ -188,7 +189,7 @@ public class ErrorServicesImpl implements ErrorServices {
             hourDataTypes[i].setHour(format1);
             hourDataTypes[i].setCount(0);
         }
-        List<HourDataType> list = errorMapper.selectErrorCountListByHour(pid, now.toString(), errorMsg);
+        List<HourDataType> list = errorMapper.selectErrorCountListByHour(pid, now.format(formatter1), errorMsg);
         for (HourDataType hourDataType : list) {
             String hour = hourDataType.getHour();
             for (int i = 0; i < 24; i++) {

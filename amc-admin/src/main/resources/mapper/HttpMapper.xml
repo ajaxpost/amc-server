@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.amc.mapper.HttpMapper">
+    <insert id="save">
+        insert into http
+        (
+        http_id,
+        project_id,
+        begin_time,
+        end_time,
+        city,
+        ip,
+        province,
+        page_url,
+        route_id,
+        sdk_version,
+        ses_id,
+        time,
+        time_stamp,
+        type,
+        user_id,
+        device_info,
+        status,
+        http_info
+        ) values
+        <foreach collection="list" item="item" separator=",">
+            (
+            null,
+            #{item.apiKey},
+            #{item.beginTime},
+            #{item.endTime},
+            #{item.city},
+            #{item.ip},
+            #{item.province},
+            #{item.pageUrl},
+            #{item.routeId},
+            #{item.sdkVersion},
+            #{item.sesId},
+            #{item.time},
+            #{item.timeStamp},
+            #{item.type},
+            #{item.userId},
+            #{item.deviceInfo},
+            #{item.httpInfo.status},
+            #{item.httpInfo, typeHandler=com.amc.typeHandler.ObjTypeHandler, jdbcType=VARCHAR}
+            )
+        </foreach>
+    </insert>
+</mapper>

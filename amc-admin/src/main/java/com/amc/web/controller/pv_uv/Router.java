@@ -5,6 +5,7 @@ import com.amc.services.RouterServices;
 import com.amc.web.domain.CountByHour;
 import com.amc.web.domain.PvPOJO;
 import com.amc.web.domain.TodayFlowPOJO;
+import com.amc.web.domain.maptype.ShowNameDataType;
 import com.amc.web.domain.maptype.TodayDataType;
 import io.swagger.annotations.*;
 import lombok.extern.slf4j.Slf4j;
@@ -99,5 +100,58 @@ public class Router {
                                                     @RequestParam Integer scope) {
         CountByHour newCustomerCountByHour = routerServices.getNewCustomerCountByHour(pid, scope);
         return R.ok(newCustomerCountByHour);
+    }
+
+    @GetMapping("getSimpleUrlCountOrderByCount")
+    @ApiOperation(value = "获取某一段时间的的页面访问量排行", notes = "概览界面的页面访问量排行")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "pid", value = "项目id", required = true, dataType = "String"),
+            @ApiImplicitParam(name = "topCount", value = "top多少条", required = true, dataType = "String", example = "10"),
+            @ApiImplicitParam(name = "topDays", value = "时间范围,比如1天,7天,30天", required = true, dataType = "String", example = "1")
+    })
+    public R<List<ShowNameDataType>> getSimpleUrlCountOrderByCount(@RequestParam String pid,
+                                                                   @RequestParam String topCount,
+                                                                   @RequestParam String topDays) {
+        List<ShowNameDataType> simpleUrlCountOrderByCount = routerServices.getSimpleUrlCountOrderByCount(pid, topCount, topDays);
+
+        return R.ok(simpleUrlCountOrderByCount);
+    }
+
+    @GetMapping("getCityCountOrderByCount")
+    @ApiOperation(value = "获取某一段时间的的城市访问量排行", notes = "概览界面的城市访问量排行")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "pid", value = "项目id", required = true, dataType = "String"),
+            @ApiImplicitParam(name = "topCount", value = "top多少条", required = true, dataType = "String", example = "10"),
+            @ApiImplicitParam(name = "topDays", value = "时间范围,比如1天,7天,30天", required = true, dataType = "String", example = "1")
+    })
+    public R<List<ShowNameDataType>> getCityCountOrderByCount(@RequestParam String pid,
+                                                              @RequestParam String topCount,
+                                                              @RequestParam String topDays) {
+        List<ShowNameDataType> cityCountOrderByCount = routerServices.getCityCountOrderByCount(pid, topCount, topDays);
+        return R.ok(cityCountOrderByCount);
+    }
+
+    @GetMapping("getResidenceTimeCountOrderByCount")
+    @ApiOperation(value = "获取某一段时间的的停留时长排行", notes = "概览界面的停留时长排行")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "pid", value = "项目id", required = true, dataType = "String"),
+            @ApiImplicitParam(name = "topCount", value = "top多少条", required = true, dataType = "String", example = "10"),
+            @ApiImplicitParam(name = "topDays", value = "时间范围,比如1天,7天,30天", required = true, dataType = "String", example = "1")
+    })
+    public R<List<ShowNameDataType>> getResidenceTimeCountOrderByCount(String pid, String topCount, String topDays) {
+        List<ShowNameDataType> residenceTimeCountOrderByCount = routerServices.getResidenceTimeCountOrderByCount(pid, topCount, topDays);
+        return R.ok(residenceTimeCountOrderByCount);
+    }
+
+    @GetMapping("getBrowserNameCountOrderByCount")
+    @ApiOperation(value = "获取某一段时间的的浏览器访问量排行", notes = "概览界面的浏览器访问量排行")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "pid", value = "项目id", required = true, dataType = "String"),
+            @ApiImplicitParam(name = "topCount", value = "top多少条", required = true, dataType = "String", example = "10"),
+            @ApiImplicitParam(name = "topDays", value = "时间范围,比如1天,7天,30天", required = true, dataType = "String", example = "1")
+    })
+    public R<List<ShowNameDataType>> getBrowserNameCountOrderByCount(String pid, String topCount, String topDays) {
+        List<ShowNameDataType> browserNameCountOrderByCount = routerServices.getBrowserNameCountOrderByCount(pid, topCount, topDays);
+        return R.ok(browserNameCountOrderByCount);
     }
 }

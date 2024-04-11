@@ -2,6 +2,7 @@ package com.amc.mapper;
 
 import com.amc.web.domain.PvPOJO;
 import com.amc.web.domain.maptype.HourDataType;
+import com.amc.web.domain.maptype.ShowNameDataType;
 import com.amc.web.domain.maptype.TodayDataType;
 import org.apache.ibatis.annotations.Param;
 
@@ -28,5 +29,13 @@ public interface RouterMapper {
     List<HourDataType> selectUvByHour(@Param("pid") String pid, @Param("startTime") String startTime, @Param("endTime") String endTime);
 
     List<HourDataType> selectNewUvByHour(@Param("pid") String pid, @Param("startTime") String startTime, @Param("endTime") String endTime);
+
+    List<ShowNameDataType> selectSimpleUrlCountOrderByCount(@Param("pid") String pid, @Param("topCount") Integer topCount, @Param("startDay") String startDay, @Param("endDay") String endDay);
+
+    List<ShowNameDataType> selectCityCountOrderByCount(@Param("pid") String pid, @Param("topCount") Integer topCount, @Param("startDay") String startDay, @Param("endDay") String endDay);
+
+    List<ShowNameDataType> selectResidenceTimeCountOrderByCount(@Param("pid") String pid, @Param("topCount") Integer topCount, @Param("startDay") String startDay, @Param("endDay") String endDay);
+
+    List<ShowNameDataType> selectBrowserNameCountOrderByCount(@Param("pid") String pid, @Param("topCount") Integer topCount, @Param("startDay") String startDay, @Param("endDay") String endDay);
 
 }

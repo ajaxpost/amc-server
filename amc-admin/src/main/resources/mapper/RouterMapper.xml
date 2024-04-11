@@ -115,5 +115,31 @@
         ) GROUP BY hour
     </select>
 
+    <select id="selectSimpleUrlCountOrderByCount" resultType="showNameDataType">
+        select page_url as show_name,count(*) as count from pv where project_id = #{pid} and
+        DATE(FROM_UNIXTIME(time / 1000)) BETWEEN #{startDay} and #{endDay}
+        GROUP BY page_url ORDER BY count DESC LIMIT #{topCount}
+    </select>
+
+
+    <select id="selectCityCountOrderByCount" resultType="showNameDataType">
+        select city as show_name,count(*) as count from pv where project_id = #{pid} and
+        DATE(FROM_UNIXTIME(time / 1000)) BETWEEN #{startDay} and #{endDay}
+        GROUP BY city ORDER BY count DESC LIMIT #{topCount}
+    </select>
+
+    <select id="selectResidenceTimeCountOrderByCount" resultType="showNameDataType">
+        select page_url as show_name,MAX(residence_time) as count from pv where project_id = #{pid} and
+        DATE(FROM_UNIXTIME(time / 1000)) BETWEEN #{startDay} and #{endDay}
+        GROUP BY page_url
+        ORDER BY count DESC LIMIT #{topCount}
+    </select>
+
+    <select id="selectBrowserNameCountOrderByCount" resultType="showNameDataType">
+        select device_info as show_name,count(*) as count from pv where project_id = #{pid} and
+        DATE(FROM_UNIXTIME(time / 1000)) BETWEEN #{startDay} and #{endDay}
+        GROUP BY device_info
+        ORDER BY count DESC LIMIT #{topCount}
+    </select>
 
 </mapper>

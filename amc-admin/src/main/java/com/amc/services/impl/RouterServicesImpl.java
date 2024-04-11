@@ -6,6 +6,7 @@ import com.amc.web.domain.CountByHour;
 import com.amc.web.domain.PvPOJO;
 import com.amc.web.domain.TodayFlowPOJO;
 import com.amc.web.domain.maptype.HourDataType;
+import com.amc.web.domain.maptype.ShowNameDataType;
 import com.amc.web.domain.maptype.TodayDataType;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -224,6 +225,43 @@ public class RouterServicesImpl implements RouterServices {
         List<HourDataType> _yesterData = transformToHourList(yesterData, yester);
         _yesterData.sort(Comparator.comparing(HourDataType::getHour));
         return new CountByHour(_yesterData, _todayData);
+    }
+
+    @Override
+    public List<ShowNameDataType> getSimpleUrlCountOrderByCount(String pid, String topCount, String topDays) {
+        /**
+         * 需要获取日期
+         * 1. 获取当前日期
+         * 2. 获取当前日期的前topDays天
+         */
+        LocalDate now = LocalDate.now();
+        LocalDate yester = now.minusDays(Integer.parseInt(topDays));
+        /**
+         * 日期数据有了,之后,我们就直接统计数据即可
+         */
+        return routerMapper.selectSimpleUrlCountOrderByCount(pid, Integer.parseInt(topCount), yester.toString(), now.toString());
+    }
+
+    @Override
+    public List<ShowNameDataType> getCityCountOrderByCount(String pid, String topCount, String topDays) {
+        LocalDate now = LocalDate.now();
+        LocalDate yester = now.minusDays(Integer.parseInt(topDays));
+        return routerMapper.selectCityCountOrderByCount(pid, Integer.parseInt(topCount), yester.toString(), now.toString());
+
+    }
+
+    @Override
+    public List<ShowNameDataType> getResidenceTimeCountOrderByCount(String pid, String topCount, String topDays) {
+        LocalDate now = LocalDate.now();
+        LocalDate yester = now.minusDays(Integer.parseInt(topDays));
+        return routerMapper.selectResidenceTimeCountOrderByCount(pid, Integer.parseInt(topCount), yester.toString(), now.toString());
+    }
+
+    @Override
+    public List<ShowNameDataType> getBrowserNameCountOrderByCount(String pid, String topCount, String topDays) {
+        LocalDate now = LocalDate.now();
+        LocalDate yester = now.minusDays(Integer.parseInt(topDays));
+        return routerMapper.selectBrowserNameCountOrderByCount(pid, Integer.parseInt(topCount), yester.toString(), now.toString());
     }
 
 

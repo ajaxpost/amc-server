@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2486309a-3c0d-46e5-8a27-7036c50fdd92" name="Default Changelist" comment="解决冲突">
-      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/maptype/ShowNameDataType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/mapper/ResourceMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/ResourceServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/impl/ResourceServicesImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/resource/Resource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/ResourcePOJO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/ResourceMapper.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../boot-05/files/登录.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../boot-05/files/进度.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../boot-05/files/问题.docx" afterDir="false" />
@@ -85,11 +90,6 @@
       <change afterPath="$PROJECT_DIR$/../boot-06-jdbc/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../java_web/forum.rar" beforeDir="false" afterPath="$PROJECT_DIR$/../../java_web/forum.rar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/mapper/RouterMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/mapper/RouterMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/RouterServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/RouterServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/impl/RouterServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/impl/RouterServicesImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/pv_uv/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/pv_uv/Router.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/RouterMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/RouterMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../boot-05/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-05/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/MainApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/controller/ParamsTestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../boot-05/src/main/java/com/example/controller/ParamsTestController.java" afterDir="false" />

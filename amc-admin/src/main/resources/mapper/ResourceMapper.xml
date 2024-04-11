@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.amc.mapper.ResourceMapper">
+    <insert id="save">
+        insert into resource
+        (
+        resource_id,
+        project_id,
+        page_url,
+        ip,
+        city,
+        province,
+        element_type,
+        route_id,
+        sdk_version,
+        ses_id,
+        size,
+        source_url,
+        start_time,
+        duration,
+        status,
+        time,
+        user_id,
+        device_info
+        ) values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            null,
+            #{item.apiKey},
+            #{item.pageUrl},
+            #{item.ip},
+            #{item.city},
+            #{item.province},
+            #{item.elementType},
+            #{item.routeId},
+            #{item.sdkVersion},
+            #{item.sesId},
+            #{item.size},
+            #{item.sourceUrl},
+            #{item.startTime},
+            #{item.duration},
+            #{item.status},
+            #{item.time},
+            #{item.userId},
+            #{item.deviceInfo}
+            )
+        </foreach>
+    </insert>
+</mapper>

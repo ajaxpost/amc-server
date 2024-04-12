@@ -44,7 +44,7 @@
             #{item.userId},
             #{item.deviceInfo},
             #{item.httpInfo.status},
-            #{item.httpInfo, typeHandler=com.amc.typeHandler.ObjTypeHandler, jdbcType=VARCHAR}
+            #{item.httpInfo}
             )
         </foreach>
     </insert>

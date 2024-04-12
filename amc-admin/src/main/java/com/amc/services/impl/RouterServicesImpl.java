@@ -236,10 +236,11 @@ public class RouterServicesImpl implements RouterServices {
          */
         LocalDate now = LocalDate.now();
         LocalDate yester = now.minusDays(Integer.parseInt(topDays));
+        Integer i = Integer.valueOf(topCount);
         /**
          * 日期数据有了,之后,我们就直接统计数据即可
          */
-        return routerMapper.selectSimpleUrlCountOrderByCount(pid, Integer.parseInt(topCount), yester.toString(), now.toString());
+        return routerMapper.selectSimpleUrlCountOrderByCount(pid, i, yester.toString(), now.toString());
     }
 
     @Override

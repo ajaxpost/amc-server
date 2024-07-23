@@ -2,10 +2,12 @@ package com.amc.services.impl;
 
 import com.amc.core.DayUtils;
 import com.amc.mapper.ErrorMapper;
+import com.amc.mapper.RecordScreenMapper;
 import com.amc.mapper.RouterMapper;
 import com.amc.services.ErrorServices;
 import com.amc.web.domain.ErrorConfig;
 import com.amc.web.domain.PvPOJO;
+import com.amc.web.domain.RecordScreen;
 import com.amc.web.domain.maptype.HourDataType;
 import com.amc.web.domain.maptype.MinuteDataType;
 import com.github.pagehelper.PageHelper;
@@ -31,6 +33,9 @@ public class ErrorServicesImpl implements ErrorServices {
 
     @Autowired
     private RouterMapper routerMapper;
+
+    @Autowired
+    private RecordScreenMapper recordScreenMapper;
 
     @Override
     public int save(ErrorConfig errorConfig) {
@@ -208,5 +213,11 @@ public class ErrorServicesImpl implements ErrorServices {
     public List<MinuteDataType> getJavascriptErrorCountByMinute(String pid, String errorMsg, String timeHour) {
         String s = DayUtils.timestamptoDateString(Long.parseLong(timeHour), "yyyy-MM-dd HH");
         return errorMapper.selectErrorCountListByMinute(pid, errorMsg, s);
+    }
+
+    @Override
+    public RecordScreen getErrorByScreenId(String recordScreenId) {
+
+        return recordScreenMapper.getInfoByScreenId(recordScreenId);
     }
 }

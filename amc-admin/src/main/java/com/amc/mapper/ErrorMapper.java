@@ -26,7 +26,7 @@ public interface ErrorMapper {
     ErrorConfig getErrorConfigById(@Param("id") String id);
 
     // 这个错误不用管
-    // @MapKey("id")
+//    @MapKey("id")
     // 默认是以列名为key
     // https://www.bmabk.com/index.php/post/110716.html
     // 你可以根据这个文章,来关闭这种错误提示

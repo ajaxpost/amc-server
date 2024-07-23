@@ -48,4 +48,63 @@
             )
         </foreach>
     </insert>
+
+    <resultMap id="httpMap" type="httpPOJO">
+        <id column="http_id" property="httpId"/>
+        <result column="project_id" property="apiKey"/>
+        <result column="begin_time" property="beginTime"/>
+        <result column="end_time" property="endTime"/>
+        <result column="city" property="city"/>
+        <result column="ip" property="ip"/>
+        <result column="province" property="province"/>
+        <result column="page_url" property="pageUrl"/>
+        <result column="route_id" property="routeId"/>
+        <result column="sdk_version" property="sdkVersion"/>
+        <result column="ses_id" property="sesId"/>
+        <result column="time" property="time"/>
+        <result column="time_stamp" property="timeStamp"/>
+        <result column="type" property="type"/>
+        <result column="user_id" property="userId"/>
+        <result column="device_info" property="deviceInfo"/>
+        <result column="status" property="status"/>
+        <result column="http_info" property="httpInfo"/>
+        <result column="count" property="count"/>
+    </resultMap>
+
+    <select id="getHttpErrorCountByDay" resultMap="httpMap">
+        select *,count(*) as count,
+        ROUND(count(*) * 100.0 / (select count(*) as count from http
+        <where>
+            <if test="pid != null">
+                and project_id = #{pid}
+            </if>
+            <if test="startDate != null and endDate != null">
+                and time between #{startDate} and #{endDate}
+            </if>
+        </where>
+        ),2) as round
+        from http
+        <where>
+            <if test="pid != null">
+                and project_id = #{pid}
+            </if>
+            <if test="startDate != null and endDate != null">
+                and time between #{startDate} and #{endDate}
+            </if>
+            and status in ("404","401","503","500") GROUP BY status
+        </where>
+    </select>
+
+    <select id="getStatusListGroupByErrorCode" resultMap="httpMap">
+        select *,count(*) as count from http
+        <where>
+            <if test="pid != null">
+                and project_id = #{pid}
+            </if>
+            <if test="date != null">
+                and FROM_UNIXTIME(time / 1000,"%Y-%m-%d") = #{date}
+            </if>
+            and status in ("404","401","503","500") GROUP BY status
+        </where>
+    </select>
 </mapper>

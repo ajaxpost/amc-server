@@ -1,6 +1,7 @@
 package com.amc.services;
 
 import com.amc.web.domain.ErrorConfig;
+import com.amc.web.domain.RecordScreen;
 import com.amc.web.domain.maptype.HourDataType;
 import com.amc.web.domain.maptype.MinuteDataType;
 
@@ -35,4 +36,6 @@ public interface ErrorServices {
      * @return
      */
     List<MinuteDataType> getJavascriptErrorCountByMinute(String pid, String errorMsg, String timeHour);
+
+    RecordScreen getErrorByScreenId(String recordScreenId);
 }

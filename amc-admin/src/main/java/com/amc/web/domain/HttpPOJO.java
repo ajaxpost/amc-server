@@ -7,6 +7,7 @@ import lombok.ToString;
 @ToString
 public class HttpPOJO {
 
+    private String httpId;
     private String apiKey;
     private Long beginTime;
     private Long endTime;
@@ -23,6 +24,9 @@ public class HttpPOJO {
     private String userId;
     private DeviceInfo deviceInfo;
     private HttpInfo httpInfo;
+    private String status;
+    private Integer count;
+    private Double round;
 
 
 }

@@ -4,6 +4,7 @@ import com.amc.core.DayUtils;
 import com.amc.core.domain.R;
 import com.amc.services.ErrorServices;
 import com.amc.web.domain.ErrorConfig;
+import com.amc.web.domain.RecordScreen;
 import com.amc.web.domain.maptype.HourDataType;
 import com.amc.web.domain.maptype.MinuteDataType;
 import com.github.pagehelper.PageHelper;
@@ -124,8 +125,8 @@ public class error {
             @ApiImplicitParam(name = "errorId", value = "错误id", dataType = "String", dataTypeClass = String.class)
     })
     public R<Map<String, Integer>> getErrorCountByNum(@RequestParam String pid,
-                                                      @RequestParam String errorMsg,
-                                                      @RequestParam String errorId
+                                                      @RequestParam String errorId,
+                                                      @RequestParam(required = false) String errorMsg
     ) {
         Map<String, Integer> errorCountByNum = errorServices.getErrorCountByNum(pid, errorMsg, errorId);
         return R.ok(errorCountByNum, "获取成功");
@@ -156,5 +157,13 @@ public class error {
         List<MinuteDataType> errorCountByMinute = errorServices.getJavascriptErrorCountByMinute(pid, errorMsg, timeHour);
         return R.ok(errorCountByMinute);
     }
+
+    @GetMapping("/error/getErrorByScreenId/{recordScreenId}")
+    @ApiOperation("根据recordScreenId获取详细信息")
+    @ApiImplicitParam(name = "recordScreenId", value = "错误回放ID", dataType = "String", dataTypeClass = String.class)
+    public R<RecordScreen> getErrorByScreenId(@PathVariable String recordScreenId) {
+        return R.ok(errorServices.getErrorByScreenId(recordScreenId));
+    }
+
 
 }

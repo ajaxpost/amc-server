@@ -10,4 +10,77 @@
         values (#{apiKey}, #{name}, #{pageUrl},
         #{sdkVersion},#{time},#{userId},#{routeId},#{sesId},#{value},#{deviceInfo},#{ip},#{city},#{province})
     </insert>
+
+    <insert id="save2" parameterType="perConfig2">
+        insert into per
+        (
+        project_id,
+        dns,
+        tcp,
+        `ssl`,
+        response,
+        transfer,
+        dom_parse,
+        resource,
+        load_page,
+        time,city,ip,page_url,province,route_id,sdk_version,ses_id,user_id,device_info
+        )
+        values
+        (
+        #{apiKey},
+        #{dns},
+        #{tcp},
+        #{ssl},
+        #{response},
+        #{transfer},
+        #{domParse},
+        #{resource},
+        #{loadPage},
+        #{time},
+        #{city},
+        #{ip},
+        #{pageUrl},
+        #{province},
+        #{routeId},
+        #{sdkVersion},
+        #{sesId},
+        #{userId},
+        #{deviceInfo}
+        )
+    </insert>
+
+    <resultMap id="per2" type="perConfig2">
+        <id property="id" column="id"/>
+        <result property="apiKey" column="project_id"/>
+        <result property="dns" column="dns"/>
+        <result property="tcp" column="tcp"/>
+        <result property="ssl" column="ssl"/>
+        <result property="response" column="response"/>
+        <result property="transfer" column="transfer"/>
+        <result property="domParse" column="dom_parse"/>
+        <result property="resource" column="resource"/>
+        <result property="loadPage" column="load_page"/>
+        <result property="time" column="time"/>
+        <result property="city" column="city"/>
+        <result property="ip" column="ip"/>
+        <result property="pageUrl" column="page_url"/>
+        <result property="province" column="province"/>
+        <result property="routeId" column="route_id"/>
+        <result property="sdkVersion" column="sdk_version"/>
+        <result property="sesId" column="ses_id"/>
+        <result property="userId" column="user_id"/>
+        <result property="deviceInfo" column="device_info"/>
+    </resultMap>
+
+    <select id="getPerformance" resultMap="per2">
+        select * from per
+        <where>
+            <if test="pid != null">
+                and project_id = #{pid}
+            </if>
+            <if test="startDate != null and endDate != null">
+                and time between #{startDate} and #{endDate}
+            </if>
+        </where>
+    </select>
 </mapper>

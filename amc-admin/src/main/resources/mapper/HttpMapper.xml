@@ -91,7 +91,7 @@
             <if test="startDate != null and endDate != null">
                 and time between #{startDate} and #{endDate}
             </if>
-            and status in ("404","401","503","500") GROUP BY status
+            and status >= 400 or status = 0 GROUP BY status
         </where>
     </select>
 
@@ -104,7 +104,7 @@
             <if test="date != null">
                 and FROM_UNIXTIME(time / 1000,"%Y-%m-%d") = #{date}
             </if>
-            and status in ("404","401","503","500") GROUP BY status
+            and status >= 400 or status = 0 GROUP BY status
         </where>
     </select>
 </mapper>

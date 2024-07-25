@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 @Slf4j
@@ -36,6 +37,22 @@ public class HttpServicesImpl implements HttpServices {
             DayDataType dayDataType = new DayDataType();
             DayDataType perDayDataType = new DayDataType();
             String day = DayUtils.timestamptoDateString(http.getTime(), "MM-dd");
+            List<DayDataType> collect = data.stream().filter((d) ->
+                    d.getDay().equals(day)).collect(Collectors.toList());
+
+
+            if (!collect.isEmpty()) {
+                DayDataType dayDataType1 = collect.get(0);
+                dayDataType1.setCount((Integer) (dayDataType1.getCount()) + http.getCount());
+                List<DayDataType> collect1 = perData.stream().filter((d) ->
+                        d.getDay().equals(day)).collect(Collectors.toList());
+                if (!collect1.isEmpty()) {
+                    DayDataType dayDataType2 = collect1.get(0);
+                    dayDataType2.setCount((Double) (dayDataType2.getCount()) + http.getRound());
+                }
+                continue;
+
+            }
             dayDataType.setDay(day);
             dayDataType.setCount(http.getCount());
             data.add(dayDataType);

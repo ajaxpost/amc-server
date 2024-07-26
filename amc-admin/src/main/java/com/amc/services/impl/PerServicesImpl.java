@@ -5,6 +5,7 @@ import com.amc.services.PerServices;
 import com.amc.web.controller.performance.Per;
 import com.amc.web.domain.PerConfig;
 import com.amc.web.domain.PerConfig2;
+import com.amc.web.domain.WebVitalsConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,5 +34,10 @@ public class PerServicesImpl implements PerServices {
     @Override
     public List<PerConfig2> getPerformance(String pid, String startDate, String endDate) {
         return perMapper.getPerformance(pid, startDate, endDate);
+    }
+
+    @Override
+    public List<WebVitalsConfig> getWebVitals(String pid, String startDate, String endDate) {
+        return perMapper.getWebVitals(pid, startDate, endDate);
     }
 }

@@ -7,7 +7,8 @@
     <list default="true" id="2486309a-3c0d-46e5-8a27-7036c50fdd92" name="Default Changelist" comment="解决冲突">
       <change afterPath="$PROJECT_DIR$/../../java_ssm/ssm-conf-2/.idea/jarRepositories.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../HelloWord/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/PerConfig2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/WebVitalsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/maptype/NameDataType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../java_ssm/mybatis-quick/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../java_ssm/mybatis-quick/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../java_ssm/mybatis-quick/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../java_ssm/mybatis-quick/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../java_ssm/mybatis-quick/.idea/dataSources/2dedf605-cbae-4c39-a204-8bc70ae94945.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../java_ssm/mybatis-quick/.idea/dataSources/2dedf605-cbae-4c39-a204-8bc70ae94945.xml" afterDir="false" />
@@ -25,12 +26,15 @@
       <change beforePath="$PROJECT_DIR$/../HelloWord/target/classes/com/example/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloWord/target/classes/com/example/domain/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/mapper/PerMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/mapper/PerMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/mapper/RouterMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/mapper/RouterMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/PerServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/PerServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/impl/HttpServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/impl/HttpServicesImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/RouterServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/RouterServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/impl/PerServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/impl/PerServicesImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/impl/RouterServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/impl/RouterServicesImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/performance/Per.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/performance/Per.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/HttpMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/HttpMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/pv_uv/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/pv_uv/Router.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/PerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/PerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/RouterMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/RouterMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring-security-mybatis/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-security-mybatis/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring-security-mybatis/src/main/java/com/example/demo/demos/controller/VerifyCodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-security-mybatis/src/main/java/com/example/demo/demos/controller/VerifyCodeController.java" afterDir="false" />
     </list>
@@ -218,6 +222,8 @@
       <workItem from="1721735621467" duration="2793000" />
       <workItem from="1721786973159" duration="9124000" />
       <workItem from="1721870950159" duration="14652000" />
+      <workItem from="1721897264064" duration="21000" />
+      <workItem from="1721956947476" duration="10847000" />
     </task>
     <servers />
   </component>

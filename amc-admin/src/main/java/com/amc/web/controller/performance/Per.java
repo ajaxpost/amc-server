@@ -4,6 +4,7 @@ import com.amc.core.domain.R;
 import com.amc.services.PerServices;
 import com.amc.web.domain.PerConfig;
 import com.amc.web.domain.PerConfig2;
+import com.amc.web.domain.WebVitalsConfig;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -59,5 +60,17 @@ public class Per {
         log.info("获取性能信息:{}", performance);
         performance.sort((o1, o2) -> Math.toIntExact(o1.getTime() - o2.getTime()));
         return R.ok(performance);
+    }
+
+    @GetMapping("/getWebVitals")
+    @ApiOperation(value = "Core Web Vitals")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "pid", value = "项目id", dataType = "String", dataTypeClass = String.class),
+            @ApiImplicitParam(name = "startDate", value = "开始时间-时间戳", dataType = "String", dataTypeClass = String.class),
+            @ApiImplicitParam(name = "endDate", value = "结束时间-时间戳", dataType = "String", dataTypeClass = String.class),
+    })
+    public R<List<WebVitalsConfig>> getWebVitals(@RequestParam String pid, @RequestParam String startDate, @RequestParam String endDate) {
+        List<WebVitalsConfig> webVitals = perServices.getWebVitals(pid, startDate, endDate);
+        return R.ok(webVitals);
     }
 }

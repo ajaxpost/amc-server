@@ -83,4 +83,17 @@
             </if>
         </where>
     </select>
+
+    <select id="getWebVitals" resultType="webVitalsConfig">
+        select name,ROUND(avg(value),2) as value from performance
+        <where>
+            <if test="pid != null">
+                and project_id = #{pid}
+            </if>
+            <if test="startDate != null and endDate != null">
+                and time between #{startDate} and #{endDate}
+            </if>
+        </where>
+        GROUP BY name
+    </select>
 </mapper>

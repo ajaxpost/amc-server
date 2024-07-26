@@ -5,6 +5,7 @@ import com.amc.services.RouterServices;
 import com.amc.web.domain.CountByHour;
 import com.amc.web.domain.PvPOJO;
 import com.amc.web.domain.TodayFlowPOJO;
+import com.amc.web.domain.maptype.NameDataType;
 import com.amc.web.domain.maptype.ShowNameDataType;
 import com.amc.web.domain.maptype.TodayDataType;
 import io.swagger.annotations.*;
@@ -153,5 +154,17 @@ public class Router {
     public R<List<ShowNameDataType>> getBrowserNameCountOrderByCount(String pid, String topCount, String topDays) {
         List<ShowNameDataType> browserNameCountOrderByCount = routerServices.getBrowserNameCountOrderByCount(pid, topCount, topDays);
         return R.ok(browserNameCountOrderByCount);
+    }
+
+    @GetMapping("getPv")
+    public R<List<TodayDataType>> getPv(@RequestParam String pid, @RequestParam String startDate, @RequestParam String endDate) {
+        List<TodayDataType> pv = routerServices.getPv(pid, startDate, endDate);
+        return R.ok(pv);
+    }
+
+    @GetMapping("getVisitPage")
+    public R<List<NameDataType>> getVisitPage(@RequestParam String pid, @RequestParam String startDate, @RequestParam String endDate) {
+        List<NameDataType> visitPage = routerServices.getVisitPage(pid, startDate, endDate);
+        return R.ok(visitPage);
     }
 }

@@ -3,6 +3,7 @@ package com.amc.services;
 import com.amc.web.domain.CountByHour;
 import com.amc.web.domain.PvPOJO;
 import com.amc.web.domain.TodayFlowPOJO;
+import com.amc.web.domain.maptype.NameDataType;
 import com.amc.web.domain.maptype.ShowNameDataType;
 import com.amc.web.domain.maptype.TodayDataType;
 
@@ -39,5 +40,9 @@ public interface RouterServices {
     List<ShowNameDataType> getResidenceTimeCountOrderByCount(String pid, String topCount, String topDays);
 
     List<ShowNameDataType> getBrowserNameCountOrderByCount(String pid, String topCount, String topDays);
+
+    List<TodayDataType> getPv(String pid, String startDate, String endDate);
+
+    List<NameDataType> getVisitPage(String pid, String startDate, String endDate);
 
 }

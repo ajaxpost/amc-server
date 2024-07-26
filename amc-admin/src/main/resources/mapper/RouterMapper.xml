@@ -142,4 +142,32 @@
         ORDER BY count DESC LIMIT #{topCount}
     </select>
 
+    <select id="getPv" resultType="todayDataType">
+        select
+        DATE(FROM_UNIXTIME(time / 1000)) as day,count(1) as dayCount
+        from pv
+        <where>
+            <if test="pid != null">
+                and project_id = #{pid}
+            </if>
+            <if test="startDate != null and endDate != null">
+                and time between #{startDate} and #{endDate}
+            </if>
+        </where>
+        GROUP BY day
+    </select>
+
+    <select id="getVisitPage" resultType="nameDataType">
+        select page_address as name,count(page_address) as count from pv
+        <where>
+            <if test="pid != null">
+                and project_id = #{pid}
+            </if>
+            <if test="startDate != null and endDate != null">
+                and time between #{startDate} and #{endDate}
+            </if>
+        </where>
+        GROUP BY page_address
+    </select>
+
 </mapper>

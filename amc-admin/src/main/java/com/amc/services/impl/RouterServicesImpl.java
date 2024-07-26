@@ -6,6 +6,7 @@ import com.amc.web.domain.CountByHour;
 import com.amc.web.domain.PvPOJO;
 import com.amc.web.domain.TodayFlowPOJO;
 import com.amc.web.domain.maptype.HourDataType;
+import com.amc.web.domain.maptype.NameDataType;
 import com.amc.web.domain.maptype.ShowNameDataType;
 import com.amc.web.domain.maptype.TodayDataType;
 import lombok.extern.slf4j.Slf4j;
@@ -263,6 +264,16 @@ public class RouterServicesImpl implements RouterServices {
         LocalDate now = LocalDate.now();
         LocalDate yester = now.minusDays(Integer.parseInt(topDays));
         return routerMapper.selectBrowserNameCountOrderByCount(pid, Integer.parseInt(topCount), yester.toString(), now.toString());
+    }
+
+    @Override
+    public List<TodayDataType> getPv(String pid, String startDate, String endDate) {
+        return routerMapper.getPv(pid, startDate, endDate);
+    }
+
+    @Override
+    public List<NameDataType> getVisitPage(String pid, String startDate, String endDate) {
+        return routerMapper.getVisitPage(pid, startDate, endDate);
     }
 
 

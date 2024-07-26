@@ -68,6 +68,7 @@
         <result column="device_info" property="deviceInfo"/>
         <result column="status" property="status"/>
         <result column="http_info" property="httpInfo"/>
+        <result column="d" property="httpInfo"/>
         <result column="count" property="count"/>
     </resultMap>
 
@@ -106,5 +107,28 @@
             </if>
             and status >= 400 or status = 0 GROUP BY status
         </where>
+    </select>
+
+    <select id="getHttpOverflow" resultMap="httpMap">
+
+        select avg(time_stamp) as time_stamp,FROM_UNIXTIME(time / 1000,"%m-%d %H:%i") as day,
+        ((
+        select count(1) from http where project_id = #{pid} and status = 200
+        and FROM_UNIXTIME(time / 1000,"%m-%d %H:%i") = day
+        ) / count(1)) * 100 as success_rate,
+        count(1) as count
+        from http where project_id = #{pid}
+        and time between #{startDate} and #{endDate}
+        GROUP BY FROM_UNIXTIME(time / 1000,"%m-%d %H:%i")
+    </select>
+
+    <select id="getHttpTop" resultMap="httpMap">
+        select
+        http_info as d,
+        (
+        select count(http_info) from http where project_id = #{pid} and status = 200 and http_info = d
+        ) / count(1) * 100 as successRate,avg(time_stamp) as time_stamp,count(1) as count from http where project_id =
+        #{pid} GROUP BY http_info
+
     </select>
 </mapper>

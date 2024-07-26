@@ -78,5 +78,15 @@ public class HttpServicesImpl implements HttpServices {
         }
         return maps;
     }
+
+    @Override
+    public List<HttpPOJO> getHttpOverflow(String pid, String startDate, String endDate) {
+        return httpMapper.getHttpOverflow(pid, startDate, endDate);
+    }
+
+    @Override
+    public List<HttpPOJO> getHttpTop(String pid) {
+        return httpMapper.getHttpTop(pid);
+    }
 }
 

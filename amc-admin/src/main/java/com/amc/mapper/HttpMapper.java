@@ -12,4 +12,8 @@ public interface HttpMapper {
     List<HttpPOJO> getHttpErrorCountByDay(@Param("pid") String pid, @Param("startDate") String startDate, @Param("endDate") String endDate);
 
     List<HttpPOJO> getStatusListGroupByErrorCode(@Param("pid") String pid, @Param("date") String date);
+
+    List<HttpPOJO> getHttpOverflow(@Param("pid") String pid, @Param("startDate") String startDate, @Param("endDate") String endDate);
+
+    List<HttpPOJO> getHttpTop(@Param("pid") String pid);
 }

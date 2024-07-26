@@ -28,5 +28,8 @@ public class HttpPOJO {
     private Integer count;
     private Double round;
 
+    private String day;
+    private Double successRate;
+
 
 }

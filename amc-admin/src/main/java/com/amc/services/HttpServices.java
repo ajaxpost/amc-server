@@ -13,4 +13,8 @@ public interface HttpServices {
 
     List<Map<String, String>> getStatusListGroupByErrorCode(String pid, String date);
 
+    List<HttpPOJO> getHttpOverflow(String pid, String startDate, String endDate);
+
+    List<HttpPOJO> getHttpTop(String pid);
+
 }

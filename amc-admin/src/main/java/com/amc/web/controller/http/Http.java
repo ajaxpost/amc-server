@@ -59,4 +59,16 @@ public class Http {
         List<Map<String, String>> map = httpServices.getStatusListGroupByErrorCode(pid, date);
         return R.ok(map, "获取成功");
     }
+
+    @GetMapping("/http/getHttpOverflow")
+    public R<List<HttpPOJO>> getHttpOverflow(@RequestParam String pid, @RequestParam String startDate, @RequestParam String endDate) {
+        List<HttpPOJO> list = httpServices.getHttpOverflow(pid, startDate, endDate);
+        return R.ok(list, "获取成功");
+    }
+
+    @GetMapping("/http/getHttpTop")
+    public R<List<HttpPOJO>> getHttpTop(@RequestParam String pid) {
+        List<HttpPOJO> list = httpServices.getHttpTop(pid);
+        return R.ok(list, "获取成功");
+    }
 }

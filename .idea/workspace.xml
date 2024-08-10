@@ -23,12 +23,6 @@
       <change beforePath="$PROJECT_DIR$/../HelloWord/target/classes/com/example/controller/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloWord/target/classes/com/example/controller/HelloController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../HelloWord/target/classes/com/example/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloWord/target/classes/com/example/domain/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/mapper/HttpMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/mapper/HttpMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/HttpServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/HttpServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/impl/HttpServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/services/impl/HttpServicesImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/http/Http.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/controller/http/Http.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/HttpPOJO.java" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/java/com/amc/web/domain/HttpPOJO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/HttpMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/amc-admin/src/main/resources/mapper/HttpMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring-security-mybatis/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-security-mybatis/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring-security-mybatis/src/main/java/com/example/demo/demos/controller/VerifyCodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-security-mybatis/src/main/java/com/example/demo/demos/controller/VerifyCodeController.java" afterDir="false" />
     </list>
@@ -217,7 +211,11 @@
       <workItem from="1721786973159" duration="9124000" />
       <workItem from="1721870950159" duration="14652000" />
       <workItem from="1721897264064" duration="21000" />
-      <workItem from="1721956947476" duration="17861000" />
+      <workItem from="1721956947476" duration="17916000" />
+      <workItem from="1721996031146" duration="2562000" />
+      <workItem from="1722216250179" duration="690000" />
+      <workItem from="1722217898321" duration="2551000" />
+      <workItem from="1722422173611" duration="4000" />
     </task>
     <servers />
   </component>
